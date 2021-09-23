@@ -1580,4 +1580,13 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         if (checkBox1.checked === true) {
             text1.style.display = \"block\";
         } else {
-            text1.style.display = \"none\"
+            text1.style.display = \"none\";
+        }
+    }
+</script>
+
+</body>
+</html>
+", "base.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\base.html.twig");
+    }
+}
