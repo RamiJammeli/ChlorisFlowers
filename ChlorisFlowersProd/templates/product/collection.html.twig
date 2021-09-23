@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+    <br>
+    <div class="bloom-product-area margin-bottom-120 mobile-mb-50 tab-mb-80">
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-md-12">
+                    <!-- shop-options -->
+                    <div class="shop-options clearfix">
+                        <div class="short-by pull-left">
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- product-item -->
+
+                <!-- product-item -->
+
+                <!-- product-item -->
+
+            </div>
+            <!-- product-item -->
+            <div class="tab-pane fade active show" id="bloom_shop_grid_view">
+                <div class="shop-grid-view-tab-content-inner">
+                    <div class="row custom-gutter">
+
+                        {% for item in i %}
+                            <div class="bloom-gallery-item white col-md-6 col-12 mb-10">
+                                <div class="product-item text-center">
+                                    <div class="frame">
+                                        <a href="{{ path('Listproduct',{ 'categorie' : item.categorie }) }} ">
+                                            <img src="{{ asset('client/img/product/'~item.imageCategorie) }}" alt="Flower Image"></a>
+                                    </div>
+
+                                    <div class="product-action">
+                                        <ul>
+                                            {#  <li><a href="{{ path('addPanier',{'id': item.id,'categorie': item.categorie}) }}" >ADD TO CART</a></li>#}
+                                            <li class="details-link"><a style="  font-size: 20px;
+                                        text-transform: uppercase;" href="{{ path('Listproduct',{ 'categorie' : item.categorie }) }}" >{{ item.categorie }}</a></li>
+                                        </ul>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+            <!-- product-item -->
+
+
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br>
+    <br>
+    <div class="bloom-product-details-area margin-bottom-110 mobile-mb-30 tab-mb-50 s-laptop-mb-90">
+    <div class="container">
+        <div class="section-title-area ">
+            <div class="section-title section-title-2">
+                <div class="icon">
+                    <img src="{{ asset("client/img/icon/title.svg")}}" alt="Bloom">
+                </div>
+                <div class="title-text">
+                    <h2 class="title">Détails de votre commande</h2>
+                </div>
+            </div>
+        </div>
+        <!-- Page Heading -->
+
+
+
+{% for item in items %}
+        <div class="row">
+
+            <div class="col-lg-6">
+
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCardExample" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample">
+                        {% if item.typeLivraison=="livraisondomicile" %}
+                            <h6 class="m-0 font-weight-bold product-title">Livraison à Domicile</h6>
+                        {% elseif item.typeLivraison =="RecuprerChezNous" %}
+                            <h6 class="m-0 font-weight-bold product-title">Récupérer à l'atelier</h6>
+                            {% else  %}
+                                <h6 class="m-0 font-weight-bold product-title">Livraison Surprise</h6>
+                        {% endif %}
+
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCardExample">
+                        {% if  item.typeLivraison=="livraisondomicile" %}
+                            <div class="card-body">
+                                <strong>Nom </strong> <p>{{ item.idOrder.user.nom}} </p>
+                                <strong>Prenom </strong> <p>{{ item.idOrder.user.prenom}} </p>
+                                <strong>Adresse </strong> <p>{{ item.idOrder.user.adresse}} </p>
+                                <strong>Num Tel </strong> <p>{{ item.idOrder.user.tel}} </p>
+                            </div>
+                        {% elseif  item.typeLivraison=="RecuprerChezNous"%}
+
+                            <div class="card-body">
+                                <strong>Nom </strong> <p>{{ item.idOrder.user.nom}} </p>
+                                <strong>Prenom </strong> <p>{{ item.idOrder.user.prenom}} </p>
+                                <strong>Adresse </strong> <p>14 Rue Voltaire, franceville el omrane </p>
+                            </div>
+                        {% elseif  item.typeLivraison == "livraisonSurpise"%}
+                            <div class="card-body">
+                                <strong>Nom </strong> <p>{{ item.lastNameR}} </p>
+                                <strong>Prenom </strong> <p>{{ item.nameR}} </p>
+                                <strong>Adresse </strong> <p>{{ item.adressR}} </p>
+                                <strong>Num Tel </strong> <p>{{ item.phoneNumverR}} </p>
+                            </div>
+
+                        {% endif %}
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="col-lg-6">
+
+
+
+                <!-- Collapsable Card Example -->
+                <div class="card shadow mb-4">
+                    <!-- Card Header - Accordion -->
+                    <a href="#collapseCardExample3" class="d-block card-header py-3" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="collapseCardExample3">
+                        <h6 class="m-0 font-weight-bold product-title">{{ item.idProduit.getprodcutName}}</h6>
+                    </a>
+                    <!-- Card Content - Collapse -->
+                    <div class="collapse show" id="collapseCardExample3">
+                        <div class="card-body -align-center">
+                            <img src="{{ asset('client/img/product/'~item.idProduit.image) }}" alt="rose" class="center" style="height: 255px;display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+{% endfor %}
+    </div>
+    </div>
+{% endblock %}

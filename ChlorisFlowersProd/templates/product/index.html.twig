@@ -1,0 +1,368 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+{% if categorie == "the classic collection" %}
+    <div class="breadcrumb-area breadcrumb-style-1">
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner text-center">
+                        <h1 class="page-title" style="text-transform: uppercase">The Classic Collection</h1>
+                        <!-- <ul class="page-list">
+                            <li><a href="#">Home</a></li>
+                            <li>Shop</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% elseif categorie == "the bird collection" %}
+    <div class="breadcrumb-area breadcrumb-style-8">
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner text-center">
+                        <h1 class="page-title" style="text-transform: uppercase">The Bird Collection</h1>
+                        <!-- <ul class="page-list">
+                            <li><a href="#">Home</a></li>
+                            <li>Shop</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% elseif categorie == "the marble collection" %}
+        <div class="breadcrumb-area breadcrumb-style-9">
+            <div class="container">
+                <div class="row custom-gutter">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-inner text-center">
+                            <h1 class="page-title" style="text-transform: uppercase">The Marble Collection</h1>
+                            <!-- <ul class="page-list">
+                                <li><a href="#">Home</a></li>
+                                <li>Shop</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% elseif categorie == "The Blooming Bride" %}
+        <div class="breadcrumb-area breadcrumb-style-10">
+            <div class="container">
+                <div class="row custom-gutter">
+                    <div class="col-lg-12">
+                        <div class="breadcrumb-inner text-center">
+                            <h1 class="page-title" style="text-transform: uppercase">The Blooming Bride</h1>
+                            <!-- <ul class="page-list">
+                                <li><a href="#">Home</a></li>
+                                <li>Shop</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="bloom-product-area margin-bottom-120 mobile-mb-50 tab-mb-80" >
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-md-12">
+                    <!-- shop-options -->
+                    <div class="shop-options clearfix">
+
+                        <div class="shop-grid-list-view-tab-menu pull-left">
+                            <div class="nav">
+                                <a class="active show" data-toggle="tab" href="#bloom_shop_grid_view"><i class="ti-layout-grid3"></i></a>
+                                <a data-toggle="tab" href="#bloom_shop_list_view" class=""><i class="ti-view-list-alt"></i></a>
+                            </div>
+                        </div>
+                        <div class="product-search pull-right">
+                            <form action="#" class="form-input-box">
+                                <input type="text" placeholder="Search products">
+                                <button type="submit"><i class="ti-search"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-12">
+                    <div class="row">
+
+                        <div class="col-xl-9 col-lg-8 col-md-12 col-sm-12 order-lg-2">
+                            <div class="shop-grid-list-view-tab-content">
+                                <div class="tab-content">
+                                    <!-- cart -->
+                                    <div class="tab-pane fade active show" id="bloom_shop_grid_view">
+                                        <div class="shop-grid-view-tab-content-inner">
+                                            <div class="row custom-gutter">
+                                                <!-- product-item -->
+                                                {% for item in v %}
+                                                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12">
+                                                    <div class="product-item text-center">
+                                                        {% if item.categorie == "the marble collection"%}
+                                                        <div class="product-image">
+                                                            <img src="{{ asset('client/img/product/'~item.image) }}" alt="Flower Image">
+                                                            <div class="product-action">
+                                                                <ul>
+                                                                    {#  <li><a href="{{ path('addPanier',{'id': item.id,'categorie': item.categorie}) }}" >ADD TO CART</a></li>#}
+                                                                    <li class="details-link"></li>
+                                                                </ul>
+                                                            </div>
+                                                                <div class="product-badge">
+                                                                    <ul>
+                                                                        <li class="sale-badge">Sold Out</li>
+                                                                    </ul>
+                                                                </div>
+                                                        </div>
+                                                         {% elseif (item.stock == 0) or (item.stock <0) %}
+                                                        <div class="product-image">
+                                                            <img src="{{ asset('client/img/product/'~item.image) }}" alt="Flower Image">
+                                                            <div class="product-action">
+                                                                <ul>
+                                                                    {#  <li><a href="{{ path('addPanier',{'id': item.id,'categorie': item.categorie}) }}" >ADD TO CART</a></li>#}
+                                                                    <li class="details-link"></li>
+                                                                </ul>
+                                                            </div>
+                                                                <div class="product-badge">
+                                                                    <ul>
+                                                                        <li class="sale-badge">Sold Out</li>
+                                                                    </ul>
+                                                                </div>
+                                                        </div>
+
+
+                                                        {% else %}
+                                                        <div class="product-image">
+                                                            <img src="{{ asset('client/img/product/'~item.image) }}" alt="Flower Image">
+                                                        <div class="product-action">
+                                                            <ul>
+                                                                {#  <li><a href="{{ path('addPanier',{'id': item.id,'categorie': item.categorie}) }}" >ADD TO CART</a></li>#}
+                                                                <li class="details-link"><a href="{{ path('product_details', {'id': item.id }) }}" >DETAILS</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        </div>
+                                                            {% endif %}
+                                                        <div class="product-item-brief">
+                                                            {% if item.categorie == "the bird collection" %}
+                                                            <h2 class="product-title" style="font-size:18px;font-weight:bold;font-family: 'Quicksand', sans-serif;">{{ item.prodcutName }}</h2>
+                                                    <img class="freeze_class ff-image-ready" src="{{ item.imageRoseNumber }}" width="50" height="50">{{ item.roseColor }}
+                                                    <div class="product-price">
+                                                        <span>{{ item.prix }} dt</span>
+                                                    </div>
+                                                            {% else %}
+                                                            <h2 class="product-title" style="font-size:18px;font-weight:bold;font-family: 'Quicksand', sans-serif;"><a>{{ item.prodcutName }} {{ item.boxColor }}</a></h2>
+                                                            {% if item.boxSize == "L" %}
+                                                            <h2 class="product-title" ><a>Large</a></h2>
+                                                            {% elseif item.boxSize == "M"%}
+                                                                <h2 class="product-title" ><a>Medium</a></h2>
+                                                             {% elseif item.boxSize == "S"%}
+                                                                 <h2 class="product-title" ><a>Small</a></h2>
+                                                             {% else %}
+                                                                 <h2 class="product-title" ><a>XLarge</a></h2>
+                                                            {% endif %}
+                                                            <img class="freeze_class ff-image-ready" src="{{ item.imageRoseNumber }}" width="50" height="50">{{ item.roseColor }}
+                                                            <div class="product-price">
+                                                                <span>{{ item.prix }} dt</span>
+                                                            </div>
+                                                                {% endif %}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- product-item -->
+                                                {% endfor %}
+                                                <div class="navigation">
+
+                                                        {{ knp_pagination_render(v) }}
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- cart -->
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-12 col-sm-12" >
+                            <aside class="shop-sidebar-area shop-sidebar-left">
+                                <!-- category-widget -->
+                                <form action="{{ path("Listproduct",{"categorie":categorie}) }}" >
+                                    <div class="widget widget_nav_menu category-widget">
+                                        <div  id="sizeCheckBox">
+
+                                            <h4 class="widget-title">Taille du Box </h4>
+                                            <ul>
+                                                <li>
+                                                    <label class="checkbox-item">XL
+                                                        <input type="checkbox"   name="Size[]" value="XL">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox-item">L
+                                                        <input type="checkbox" class="size"  name="Size[]" value="L">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox-item">M
+                                                        <input type="checkbox" class="size"  name="Size[]" value="M">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+                                                <li>
+                                                    <label class="checkbox-item">S
+                                                        <input type="checkbox" class="size"  name="Size[]" value="S">
+                                                        <span class="checkmark"></span>
+                                                    </label>
+                                                </li>
+
+
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                    <!-- color-widget -->
+                                    <div class="widget widget_nav_menu color-widget">
+                                        <h4 class="widget-title">Couleur Du Box</h4>
+                                        <ul>
+                                            <li>
+                                                <label class="checkbox-item">Blanc
+                                                    <input type="checkbox" name="BoxColor[]" value="Blanc">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-white"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">Noir
+                                                    <input type="checkbox" name="BoxColor[]" value="Noir">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-black"></span>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <div class="widget widget_nav_menu color-widget">
+                                        <h4 class="widget-title">Couleur Des Roses</h4>
+                                        <ul>
+                                            <li>
+                                                <label class="checkbox-item">Blanche
+                                                    <input type="checkbox" name="RoseColor[]" value="Blanche">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-white"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">Rouge
+                                                    <input type="checkbox" name="RoseColor[]" value="Rouge">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-green"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">Rose
+                                                    <input type="checkbox" name="RoseColor[]" value="Rose">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-rose"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">Champagne
+                                                    <input type="checkbox" name="RoseColor[]" value="Champagne">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-yellow"></span>
+                                                </label>
+                                            </li>
+                                            <li>
+                                                <label class="checkbox-item">Rose Bicolore
+                                                    <input type="checkbox" name="RoseColor[]" value="Rose Bicolore">
+                                                    <span class="checkmark"></span>
+                                                    <span class="color-variation color-orange"></span>
+                                                </label>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                    <!-- price-filter-widget -->
+                                    <div class="widget price-filter-widget">
+                                        <h4 class="widget-title">Price Range</h4>
+                                        <div class="price_filter">
+                                            <div class="price_slider_amount">
+                                                <input type="submit"  value="Your range:"/>
+                                                <input type="text" id="amount" name="price"  value="" min="" max="" placeholder="Add Your Price" />
+                                            </div>
+                                            <div id="slider-range"></div>
+                                        </div>
+                                    </div>
+                                    {#  <!-- recent-viewed-product-widget -->
+                                <div class="widget recent-viewed-product-widget">
+                                    <h4 class="widget-title">Recent Viewed Items</h4>
+                                    <ul>
+                                        <li>
+                                            <div class="recent-viewed-product-item clearfix">
+                                                <div class="thumb">
+                                                    <a href="product-details.html"><img src="assets/img/product/1.png" alt="Bloom Image"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="content-inner">
+                                                        <h6><a href="product-details.html">Beautiful Roses</a></h6>
+                                                        <div class="product-price">
+                                                            <del>$280</del>
+                                                            <span>$250</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="recent-viewed-product-item clearfix">
+                                                <div class="thumb">
+                                                    <a href="product-details.html"><img src="assets/img/product/2.png" alt="Bloom Image"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="content-inner">
+                                                        <h6><a href="product-details.html">Wonderful Lillies</a></h6>
+                                                        <div class="product-price">
+                                                            <del>$270</del>
+                                                            <span>$240</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="recent-viewed-product-item clearfix">
+                                                <div class="thumb">
+                                                    <a href="product-details.html"><img src="assets/img/product/3.png" alt="Bloom Image"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <div class="content-inner">
+                                                        <h6><a href="product-details.html">Red Flowers</a></h6>
+                                                        <div class="product-price">
+                                                            <del>$250</del>
+                                                            <span>$230</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>#}
+                                    <br>
+                                    <div class="btn-wrapper ">
+                                        <button class="boxed-btn btn-rounded" type="submit">Filtrer</button>
+                                    </div>
+                                </form>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

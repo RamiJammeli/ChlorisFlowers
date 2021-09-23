@@ -1,0 +1,164 @@
+{# templates/registration/index.html.twig #}
+{% extends 'base.html.twig' %}
+{% block body %}
+    <!-- Breadcrumb area start -->
+    <div class="breadcrumb-area breadcrumb-style-2">
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-lg-12">
+                    <div class="breadcrumb-inner text-left">
+                        <h1 class="page-title">Mon Profil</h1>
+                        <!-- <ul class="page-list">
+                            <li><a href="#">Home</a></li>
+                            <li>Shop</li>
+                        </ul> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumb area end -->
+
+    <!-- My account area start -->
+    <div class="my-account-area margin-bottom-115 mobile-mb-50 tab-mb-80">
+        <div class="container-fluid pr-0">
+            <div class="row custom-gutter">
+                <!-- my-account-details -->
+                <div class="col-xl-2 offset-xl-1 col-md-3 col-sm-12">
+                    <div class="my-account-tab-menu">
+                        <div class="nav">
+                            <a class="active show" data-toggle="tab" href="#my_account_1_1">Mes détails</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-9 col-md-9 col-sm-12">
+                    <div class="my-account-tab-info">
+                        <div class="tab-content">
+                            <!-- my-account-details-info -->
+                            <div class="tab-pane fade active show" id="my_account_1_1">
+                                <div class="my-account-details-info">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="section-title-area text-left">
+                                                <div class="section-title section-title-2">
+                                                    <div class="icon">
+                                                        <img src="{{ asset('client/img/icon/title.svg') }}" alt="Bloom">
+                                                    </div>
+                                                    <div class="title-text">
+                                                        <h2 class="title">Mes détails</h2>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-sm-6 col-12">
+                                            <div class="my-account-details-info-form">
+                                                    {{ form_start(form) }}
+                                                    {% for message in app.session.flashbag.get('modification') %}
+                                                        <div class="alert alert-success">
+                                                            {{ message }}
+                                                        </div>
+                                                    {% endfor %}
+                                                            {{ form_row(form.nom, {'attr': {'class': 'form-control'}}) }}
+
+                                                            {{ form_row(form.prenom, {'attr': {'class': 'form-control'}}) }}
+
+                                                            {{ form_row(form.email, {'attr': {'class': 'form-control'}}) }}
+
+                                                            {{ form_row(form.tel, {'attr': {'class': 'form-control'}}) }}
+
+
+                                                            {{ form_row(form.adresse, {'attr': {'class': 'form-control'}}) }}
+
+
+                                                            {{ form_row(form.sexe, {'attr': {'class': 'form-control'}}) }}
+
+
+
+                                                    <div class="form-group">
+                                                        <div class="btn-wrapper" style="margin-top:5px;">
+                                                            <button type="submit" class="boxed-btn btn-rounded">
+                                                                <i class="fa fa-btn fa-user"></i> Modifier
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    {{ form_end(form) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- my-address-info -->
+                            <div class="tab-pane fade" id="my_account_1_2">
+                                <div class="my-account-details-info my-address-info">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="section-title-area text-left">
+                                                <div class="section-title section-title-2">
+                                                    <div class="icon">
+                                                        <img src="{{ asset('client/img/icon/title.svg') }}" alt="Bloom">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-xl-6 col-sm-6 col-12">
+                                            <div class="my-account-details-info-form">
+                                                <form action="#" class="contact-form-box">
+                                                    <label>Street name*</label>
+                                                    <input type="text" name="streetname" placeholder="Edwards street">
+                                                    <label>House number*</label>
+                                                    <input type="text" name="housenumber" placeholder="22">
+                                                    <label>State*</label>
+                                                    <input type="text" name="state" placeholder="Valley Pitot">
+                                                    <label>City*</label>
+                                                    <input type="text" name="city" placeholder="Port Louis">
+                                                    <label>Country*</label>
+                                                    <input type="text" name="cuntry" placeholder="Mauritius">
+                                                    <label>Postal code*</label>
+                                                    <input type="text" name="postalcode" placeholder="12345">
+                                                    <div class="btn-wrapper">
+                                                        <button class="boxed-btn btn-rounded" type="submit">Save settings</button>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- My account area end -->
+
+    <!-- Instagram area start -->
+    <div class="instagram-area">
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-md-12">
+                    <div class="section-title-area text-center mobile-text-left">
+                        <div class="section-title section-title-2">
+                            <div class="icon">
+                                <img src="{{ asset('client/img/icon/title.svg') }}" alt="Bloom">
+                            </div>
+                            <div class="title-text">
+                                <h2 class="title">Follow us on instagram</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="instafeed instagram-inner " data-limit="5" data-resolution="standard_resolution">
+            <ul id="instagram_feed"></ul>
+        </div>
+    </div>
+    <!-- Instagram area end -->
+{% endblock %}

@@ -1,0 +1,139 @@
+{% extends 'baseAdmin.html.twig' %}
+
+
+{% block body %}
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h2 class="m-0 font-weight-bold">Liste Commande</h2>
+            </div>
+            <br>
+            <div class="row ml-2 mr-2">
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-4 col-md-4 mb-4">
+                    <div class="card border-left-danger shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Non traité</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ nontraite }}</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-times-circle fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-warning shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">En cours</div>
+                                    <div class="h5 mb-0 font-weight-bold text-gray-800">{{ encours }}</div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-exclamation-circle fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Earnings (Monthly) Card Example -->
+                <div class="col-xl-4 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Livré</div>
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-auto">
+                                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">{{ livre }}</div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-check-circle fa-2x text-gray-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>id Commande</th>
+                            <th>Client</th>
+                            <th>Date Commande</th>
+                            <th>Total en DT</th>
+
+                            <th>Etat</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in items %}
+                            <tr>
+                                <td><a  style="color: #42444e">{{ item.id }}</a></td>
+                                <td>  {% if item.user is not null %}
+                                        {{item.user.nom}}{{ ' ' }}{{ item.user.prenom }}
+                                    {% else %}
+                                        N/A
+                                    {% endif %}</td>
+                                <td>{{ item.orderDate|date("d/m/Y") }}</td>
+                                <td>{{ item.totalAchat}}</td>
+
+                                <td class="js-status">
+                                    {% if item.status =="Non traité" %}
+                                        <a  href="{{  path('change_status', {'idCmd': item.id}) }}"  class="js-status btn btn-danger btn-icon-split">  <span style="color: white" class="js-status text">{{ item.status }}</span>
+                                        </a>
+                                    {% elseif  item.status =="En cours" %}
+                                        <a  href="{{  path('change_status', {'idCmd': item.id}) }}" class="js-status btn btn-warning btn-icon-split">  <span style="color: white" class="js-status text">{{ item.status }}</span>
+                                        </a>
+                                    {% else %}
+                                        <a  href="{{  path('change_status', {'idCmd': item.id}) }}" class="js-status btn btn-success btn-icon-split">  <span style="color: white" class="js-status text">{{ item.status }}</span>
+                                        </a>
+                                    {% endif %}
+
+
+                                </td>
+
+                                <td class="pr-2">
+
+                                    <a  href="{{ path('detailsCommandeAdmin',{'idCmd': item.id}) }}"><i class="fa fa-eye pr-2" style="font-size:20px;color:#efa2a9"></i></a>
+
+                                </td>
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- /.container-fluid -->
+
+
+
+
+{% endblock %}

@@ -1,0 +1,118 @@
+
+{% extends 'baseAdmin.html.twig' %}
+
+
+{% block body %}
+
+    <div class="container">
+        <h1 class="h3 text-gray-800 pl-5" >Ajout produit</h1>
+
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-9 pl-5">
+                        <div class="p-5">
+                            <div class="text-gray-200 pl-5">
+                            </div>
+                            {{ form_start(form) }}
+                            {{ form_row(form._token) }}
+
+                            <form class="user">
+                                    <div class="form-group ">
+                                        {{ form_label(form.prodcutName,"Product name") }}
+                                        {{ form_errors(form.prodcutName) }}
+
+
+                                        {{ form_widget(form.prodcutName, {'attr': {'class': 'form-control form-control-user','placeholder':'Nom du produit'}}) }}
+
+                                    </div>
+                                    <div class="form-group row">
+                                    <div class="col-sm-6 mb-sm-0">
+                                        {{ form_row(form.boxSize, {'attr': {'class': 'form-control form-control-user','placeholder':'Taille du box'}}) }}
+
+                                    </div>
+                                        <div class="col-sm-6">
+                                        {{ form_row(form.boxColor, {'attr': {'class': 'form-control form-control-user','placeholder':'Couleur du box'}}) }}
+                                    </div>
+                                    </div>
+                                <div class="form-group ">
+                                    {{ form_label(form.descriptionBox,"Description du box") }}
+
+
+                                    {{ form_widget(form.descriptionBox, {'attr': {'class': 'form-control form-control-user','placeholder':'Ecrivez une déscription du box'}}) }}
+
+                                </div>
+                                <div class="form-group ">
+                                    {{ form_label(form.imageFile,"Image du produit") }}
+                                    {{ form_errors(form.imageFile) }}
+
+                                    {{ form_widget(form.imageFile, {'attr': {'class': 'form-control form-control-user','placeholder':'Image du produit'}}) }}
+
+                                </div>
+                                <div class="form-group ">
+                                    {{ form_label(form.imageFileHaut,"Image haut du produit") }}
+
+                                    {{ form_widget(form.imageFileHaut, {'attr': {'class': 'form-control form-control-user','placeholder':'Image haut du produit'}}) }}
+
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-sm-0">
+
+                                    {{ form_row(form.roseNumber, {'attr': {'class': 'form-control form-control-user','placeholder':'Nombre des roses'}}) }}
+
+                                </div>
+                                    <div class="col-sm-6">
+
+                                    {{ form_row(form.roseColor, {'attr': {'class': 'form-control form-control-user','placeholder':'Couleur des roses'}}) }}
+
+                                </div>
+                                </div>
+                                <div class="form-group ">
+                                    {{ form_row(form.categorie, {'attr': {'class': 'form-control form-control-user','placeholder':'Categorie'}}) }}
+
+                                </div>
+                                <div class="form-group ">
+                                    {{ form_row(form.prix, {'attr': {'class': 'form-control form-control-user','placeholder':'Prix'}}) }}
+
+                                </div>
+
+                                <div class="form-group ">
+                                    {{ form_row(form.stock, {'attr': {'class': 'form-control form-control-user','placeholder':'stock'}}) }}
+
+                                </div>
+
+
+
+
+
+
+
+                                <button type="submit"
+                                        class="btn btn-primary btn-user btn-block add-button" style="background-color: #f9efed; border-color: #f9efed; color: #5a5c69;"
+                                        onmouseover="this.style.background='#f3bcb1';this.style.color='white';"
+                                onmouseleave="this.style.background='#f9efed';this.style.color='#5a5c69';">
+                                    Ajouter produit
+                                </button>
+                                <hr>
+
+                            </form>
+                            {{ form_end(form) }}
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+{% endblock %}
+

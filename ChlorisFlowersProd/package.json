@@ -1,0 +1,34 @@
+{
+    "devDependencies": {
+        "@symfony/webpack-encore": "^0.30.0",
+        "core-js": "^3.0.0",
+        "regenerator-runtime": "^0.13.2",
+        "vue": "^2.6.12",
+        "vue-loader": "^14.2.4",
+        "vue-template-compiler": "^2.6.12",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "encore dev",
+        "watch": "encore dev --watch",
+        "build": "encore production --progress"
+    },
+    "dependencies": {
+        "axios": "^0.21.0",
+        "bootstrap": "^4.5.3",
+        "instafeed": "^1.4.0",
+        "jquery": "^2.2.4",
+        "owl.carousel": "^2.3.4",
+        "popper.js": "^1.16.1",
+        "slick-carousel": "^1.8.1",
+        "slick-slider": "^1.8.2",
+        "sweetalert2": "^10.12.5",
+        "waypoints": "^4.0.1",
+        "webpack-jquery-ui": "^2.0.1",
+        "wow.js": "^1.1.3",
+        "wowjs": "^1.1.3"
+    }
+}

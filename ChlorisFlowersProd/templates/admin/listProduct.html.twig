@@ -1,0 +1,101 @@
+
+{% extends 'baseAdmin.html.twig' %}
+
+
+{% block body %}
+
+    <!-- Begin Page Content -->
+    <!-- Begin Page Content -->
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h2 class="m-0 font-weight-bold">Liste Produit</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                                <tr>
+                                    <th>Nom produit</th>
+                                    <th>Taille</th>
+                                    <th>Couleur Box</th>
+                                    <th>Nombre roses</th>
+                                    <th>Couleur roses</th>
+                                    <th>Stock </th>
+                                    <th>Image</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {% for item in items %}
+                                <tr>
+                                    <td><a  href="" data-toggle="modal" data-target="#exampleModalCenter" data-whatever="{{ item.prodcutName }}" style="color: #42444e">{{ item.getProdcutName }}</a></td>
+                                    <td>{{ item.getBoxSize }}</td>
+                                    <td>{{ item.getBoxColor }}</td>
+                                    <td>{{ item.getRoseNumber }}</td>
+                                    <td>{{ item.getRoseColor }}</td>
+                                    <td> {{item.getStock}} </td>
+                                    <td><img src="{{ asset('client/img/product/'~item.image) }}" alt="rose" width="80"></td>
+                                    <td class="js-status_produit">
+                                        {% if item.status=="Valide" %}
+                                            <a  href="{{  path('change_status_produit', {'idProduit': item.id}) }}"  class="js-status_produit btn btn-success btn-icon-split">  <span style="color: white" class="js-status_produit text">{{ item.status }}</span>
+                                            </a>
+                                        {% else %}
+                                            <a  href="{{  path('change_status_produit', {'idProduit': item.id}) }}" class="js-status_produit btn btn-danger btn-icon-split">  <span style="color: white" class="js-status_produit text">{{ item.status }}</span>
+                                            </a>
+                                        {% endif %}
+
+
+                                    </td>
+                                    <td class="pr-2">
+
+                                        <a href="{{ path('ProductAdminedit', {'id': item.id}) }}"><i class="fa fa-edit pr-2" style="font-size:20px;color:#efa2a9"></i></a>
+                                        <a> <i class="fa fa-trash" style="font-size:20px;color:#efa2a9"></i></a>
+
+                                    </td>
+
+                                </tr>
+                                {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </div>
+
+    <!-- Modal -->
+{#
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+#}
+    <!-- /.container-fluid -->
+
+
+
+
+{% endblock %}
+

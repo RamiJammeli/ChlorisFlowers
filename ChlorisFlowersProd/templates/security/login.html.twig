@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}S'indentifier{% endblock %}
+
+{% block body %}
+<div class="sign-up-area sign-in-area margin-bottom-120 mobile-mb-50 tab-mb-100">
+    <div class="container">
+        <div class="row custom-gutter">
+            <div class="col-xl-3 col-lg-4 col-md-6 order-xl-2">
+                <div class="sign-up-inner">
+                    <div class="section-title-area ">
+
+                    </div>
+<form method="post" class="contact-form-box">
+    {% if error %}
+        <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+    {% endif %}
+
+    {% if app.user %}
+        <div class="mb-3">
+            You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
+        </div>
+    {% endif %}
+
+
+    <label for="inputEmail">Email</label>
+    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+    <label for="inputPassword">Password</label>
+    <input type="password" name="password" id="inputPassword" class="form-control" required>
+    <div class="btn-wrapper">
+    <button class="boxed-btn" type="submit">
+        Sign in
+    </button>
+    </div>
+<br>
+
+    <input type="hidden" name="_csrf_token" class="boxed-btn btn-rounded"
+           value="{{ csrf_token('authenticate') }}">
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" name="_remember_me"> Remember me
+            </label>
+        </div>
+
+
+
+</form>
+                    <a href="{{ path('registration') }} ">Vous n'avez pas de compte ? inscrivez vous ici ..</a>
+                </div>
+            </div>
+                    <div class="col-xl-7 offset-xl-1 col-lg-8 col-md-6">
+                        <div class="custom-content-image margin-top-30 mobile-mt-50 tab-mt-50">
+                            <div class="img-shape">
+                                <img src="{{ asset('client/img/login.JPG') }}" alt="" style="width: 640px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

@@ -1,0 +1,249 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <br>
+    <div class="cart-area margin-bottom-120  mobile-mb-50 tab-mb-80">
+        <div class="container">
+            <div class="row custom-gutter">
+                <!-- shoping-cart-tab-menu -->
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="shoping-cart-tab-menu">
+                        <div class="nav">
+                            <a class="active show" data-toggle="tab">Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- shoping-cart-tab-info -->
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="shoping-cart-tab-info">
+                        <div class="tab-content">
+                            <!-- cart -->
+                            <div class="tab-pane fade active show" >
+                                <div class="shopping-cart-info">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="shoping-cart-inner">
+                                                <div class="shoping-cart-inner-table">
+                                                    <form action="#">
+                                                        <div class="table-content table-responsive mb-50">
+                                                            <table class="text-center">
+                                                                {% if items |length > 0 %}
+                                                                    {% for item in items %}
+                                                                        <tbody>
+                                                                        <!-- tr -->
+                                                                        <tr class="product-position">
+                                                                            <td class="cart-product-remove">
+                                                                                <a href="{{ path('remove_carte',{'id': item.produits.getId}) }}"><i
+                                                                                            class="ti-trash"></i></a>
+                                                                            </td>
+                                                                            <td class="cart-product-thumbnail">
+                                                                                <img
+                                                                                        src="{{ asset('client/img/product/'~item.produits.getImage) }}"
+                                                                                        alt="">
+                                                                            </td>
+                                                                            <td class="cart-product-title">
+                                                                                <h6 style="text-transform: uppercase;font-family:MinionPro-Regular,serif;}">
+                                                                                    {{ item.produits.getCategorie }}
+                                                                                    <br> {{ item.produits.getBoxColor }}
+                                                                                </h6>
+                                                                            </td>
+                                                                            {# <td class="cart-product-title">
+                                                                                <h6>
+                                                                                    <a href="product-details.html">{{ item.produits.getProdcutName }} </a>
+                                                                                </h6>
+                                                                            </td> #}
+                                                                            <td class="cart-product-title">
+                                                                                <h6 style="color: var(--paragraph-color)">
+                                                                                    Carte : {{ item.carte }}
+                                                                                </h6>
+                                                                                <h6 style="color: var(--paragraph-color)">
+                                                                                    Commentaire : {{ item.commentaire }}
+                                                                                </h6>
+                                                                            </td>
+                                                                            <td class="cart-product-multifly">{{ item.quantity }}</td>
+
+                                                                            <td class="cart-product-multifly">x</td>
+                                                                            <td class="cart-total-price sum"
+                                                                                style="color: #444444">{{ item.price }}
+                                                                                <span> DT</span></td>
+
+
+                                                                        </tr>
+                                                                        <!-- tr -->
+
+
+                                                                        </tbody>
+                                                                    {% endfor %}
+                                                                {% endif %}
+                                                            </table>
+                                                        </div>
+                                                    </form>
+                                                    <div class="shoppint-cart-total">
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="shopping-cart-coupon">
+                                                                    <p>Enter a promo code</p>
+                                                                    <form action="#" class="form-input-box">
+                                                                        <input type="text" placeholder="HELLOSUMMER">
+                                                                        <button type="submit"><i class="ti-check"></i>
+                                                                        </button>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-xl-6 desktop-text-right">
+                                                                <div class="shopping-cart-total-inner">
+                                                                    <div class=" table-responsive mb-50">
+                                                                        <table class="text-right">
+                                                                            <tbody>
+
+
+                                                                            <tr>
+                                                                                <td class="cart-total-title"
+                                                                                    style="font-family: var(--body-font)">
+                                                                                    Total:
+                                                                                </td>
+                                                                                <td class="cart-total-price"
+                                                                                    style="font-family: var(--body-font)">{{ app.session.get('total') }}
+                                                                                    DT
+                                                                                </td>
+                                                                            </tr>
+                                                                            </tbody>
+                                                                        </table>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+<br>
+                                    <!-- shipping -->
+                                        <div class="shopping-cart-info shipping-info">
+                                            <div class="row">
+                                                <div class="col-xl-12">
+                                                    <div class="shoping-cart-inner shipping-info-inner">
+                                                        <div class="row">
+                                                            <div class="col-xl-6">
+                                                                <div class="shipping-method">
+                                                                    <h4 style="text-transform: uppercase">Méthodes de Livraisons</h4>
+
+
+                                                                    <ul>
+                                                                        <li>
+                                                                            <input type="radio" id="202" name="livraison"
+                                                                                   style="border: 1px solid;"
+                                                                                   value="domicile">
+                                                                            <label for="202"> Livraison à domicile (Sur GRAND TUNIS seulement) <br>
+                                                                                Frais d'expédition 10 DT </label>
+
+                                                                        </li>
+                                                                        <li>
+                                                                            <input type="radio" id="201" name="livraison"
+                                                                                   value="surprise">
+                                                                            <label for="201"> Livraison Surprise
+                                                                                <br>Frais d'expédition 10 DT</label>
+
+                                                                        </li>
+                                                                        <div class="shipping-address">
+
+                                                                            <form action="#" class="contact-form-box"
+                                                                                  id="form" style="display:none">
+                                                                                <h6 style="">Donnez nous l'adresse et on
+                                                                                    s'occupe du reste !</h6>
+                                                                                <label>First name*</label>
+                                                                                <input type="text" name="firstname"
+                                                                                       placeholder="Prenom" id="f_name">
+                                                                                <label>Last name*</label>
+                                                                                <input type="text" name="lastname"
+                                                                                       placeholder="Nom" id="l_name">
+                                                                                <label>Street name*</label>
+                                                                                <input type="text" name="streetname"
+                                                                                       placeholder="Tunis"
+                                                                                       id="street-address">
+                                                                                <label>Phone number*</label>
+                                                                                <input type="text" name="housenumber"
+                                                                                       placeholder="22" id="phone">
+
+                                                                            </form>
+                                                                        </div>
+                                                                        <li>
+                                                                            <input type="radio" id="203" name="livraison"
+                                                                                   style="border: 1px solid;"
+                                                                                   value="atelier">
+                                                                            <label for="203" > Récupérer chez nous <br>
+                                                                                Frais d'expédition 0 DT </label>
+
+                                                                        </li>
+
+
+                                                                    </ul>
+
+
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="col-xl-6 col-md-7">
+                                                                <div class="shipping-subtotal text-right mobile-mb-30">
+                                                                    <div class="shopping-cart-total-inner shipping-subtotal-inner text-center">
+                                                                        <div class="table-responsive mb-50">
+                                                                            <table class="table">
+                                                                                <tbody>
+                                                                                <tr>
+                                                                                    <td>Total:</td>
+                                                                                    <td>{{ app.session.get('total') }} DT</td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td>Shipping and handling:</td>
+                                                                                    <td>10 DT</td>
+                                                                                </tr>
+                                                                                <tr class="shipping-subtotal-price">
+                                                                                    <td class="cart-total-title"
+                                                                                        style="font-family: var(--body-font)">
+
+                                                                                    </td>
+
+
+                                                                                </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                            <div class="btn-wrapper">
+                                                                                <button class="boxed-btn btn-rounded"
+                                                                                        onclick="checkout(event)">Valider
+                                                                                    votre Commande
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                </div>
+
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- Summary -->
+    </div>
+    </div>
+
+
+{% endblock %}

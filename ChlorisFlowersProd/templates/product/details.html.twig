@@ -1,0 +1,149 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+    <!-- Breadcrumb area start -->
+    <!-- Breadcrumb area end -->
+
+    <!-- Prodcut details area start -->
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+    <br>
+    <br>
+    <div class="bloom-product-details-area margin-bottom-110 mobile-mb-30 tab-mb-50 s-laptop-mb-90">
+        <div class="container">
+            <div class="row custom-gutter">
+                <div class="col-xl-8 col-lg-7 col-md-12">
+                    <div class="product-details-image-gallery mobile-mb-20 tab-mb-60 s-laptop-mb-80">
+                        <div class="product-details-small-img-slider ">
+                            <div class="single-item">
+                                <img src="{{ asset('client/img/product/'~product.image) }}" alt="Flower Image">
+                            </div>
+                            <div class="single-item">
+                                <img src="{{ asset('client/img/product/'~product.hautImage) }}" alt="Flower Image">
+                            </div>
+
+
+
+
+                        </div>
+                        <div class="product-details-large-img-slider ">
+                            <div class="single-item">
+                                <a href="{{ asset('client/img/product/'~product.image) }}"
+                                   data-rel="lightcase:myCollection">
+                                    <img src="{{ asset('client/img/product/'~product.image) }}"
+                                         alt="Flower Image">
+                                </a>
+                            </div>
+                            <div class="single-item">
+                                <a href="{{ asset('client/img/product/'~product.hautImage )}}"
+                                   data-rel="lightcase:myCollection">
+                                    <img src="{{ asset('client/img/product/'~product.hautImage) }}"
+                                         alt="Flower Image">
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 col-md-12">
+                    <div class="product-details-content">
+                        <h4 class="product-title"><a style="text-transform: uppercase;">{{ product.getCategorie }} {{ product.getBoxColor }}</a></h4>
+
+                        <div class="product-price">
+                            {% if product.boxSize == "L" %}
+                            <span>{{ product.getProdcutName }} Large</span>
+                            {% elseif product.boxSize == "M"%}
+                            <span>{{ product.getProdcutName }} Medium</span>
+                            {% elseif product.boxSize == "S"%}
+                            <span>{{ product.getProdcutName }} Small</span>
+                            {% else %}
+                            <span>{{ product.getProdcutName }} XLarge</span>
+                            {% endif %}
+                        </div>
+                        <div class="product-price">
+                            <span id="prix">{{ product.getPrix }} DT</span>
+                        </div>
+
+                        <p>{{ product.getDescriptionBox }}</p>
+                        <img class="freeze_class ff-image-ready" src="{{ product.getImageRoseNumber }}" width="50"
+                             height="50">{{ product.getRoseColor }} , {{  product.getRoseNumber() }} Roses
+                        {% if product.categorie == "the bird collection" %}
+                        <p>{{ product.getMacronNumber }} Macarons</p>
+                        {% endif %}
+                        <form action="{{ path('addPaniers',{'id': product.id })}}" method="post" >
+                            <div class="product-meta-area">
+                                <div class="product-meta product-quantity clearfix">
+                                    <span class="product-meta-title">Quantité</span>
+                                    <div class="product-meta-type">
+                                        <div class="cart-plus-minus">
+                                            <input type="text" value="01" name="qtybutton" class="cart-plus-minus-box" min="01" max="03">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-meta product-meta-list bloom-checkbox">
+                                    <input type="hidden" id="id" value={{ product.id }} >
+                                    <ul>
+                                        <li>
+                                            <label class="checkbox-item" >Carte (inclus et gratuite)
+                                                <input type="checkbox" id="myCheck" name="myCheck" onclick="myFunction()">
+                                                <span class="checkmark"  ></span>
+                                            </label>
+                                            <label><textarea id="txt" style="display:none" name="txt"></textarea></label>
+                                        </li>
+                                    </ul>
+                                    {% if product.categorie == "the bird collection" %}
+                                    <ul>
+                                        <li>
+                                            <label class="checkbox-item" >Macaron Personnalisé (10 DT)
+                                                <input type="checkbox" id="myCheck2" name="myCheck" onclick="myFunction3()">
+                                                <span class="checkmark"  ></span>
+                                            </label>
+                                            <label><textarea id="txt3" style="display:none" name="txt3"></textarea></label>
+                                        </li>
+                                    </ul>
+                                    {% endif %}
+                                    <ul>
+                                        <li>
+                                            <label class="checkbox-item" >Commentaire
+                                                <input type="checkbox" id="myCheck1" name="myCheck" onclick="myFunction2()">
+                                                <span class="checkmark"  ></span>
+                                            </label>
+                                            <label><textarea id="txt2" style="display:none" name="txt2"></textarea></label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="product-meta product-meta-button">
+
+                                    <div class="bloom-calender product-receive-date ">
+                                        <div class="input-group date">
+                                            <input type="text" class="form-control" placeholder="Select delivery date" name="date" required>
+                                            <span class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                   {% if (product.stock == 0) or (product.stock <0) %}
+                                        <div class="btn-wrapper">
+                                        <input type="submit" class="boxed-btn btn-rounded" id="cart" value="Add to cart" disabled="disabled">
+                                    </div>
+                                     {%else%}
+
+                                    <div class="btn-wrapper">
+                                        <input type="submit" class="boxed-btn btn-rounded" id="cart" value="Add to cart">
+                                    </div>
+                                     {% endif %}
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

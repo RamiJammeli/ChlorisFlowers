@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br>
+    <br>
+    <div class="cart-area margin-bottom-120  mobile-mb-50 tab-mb-80">
+        <div class="container">
+            <div class="row custom-gutter">
+                <!-- shoping-cart-tab-menu -->
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="shoping-cart-tab-menu">
+                         <h4>THANK YOU FOR YOUR ORDER,  {{ app.user.nom }}.</h4>
+                                                <div class="shipping-summery-brief">
+
+                                                </div>
+                    </div>
+                </div>
+                <!-- shoping-cart-tab-info -->
+                <div class="col-xl-8 offset-xl-2">
+                    <div class="shoping-cart-tab-info">
+                        <div class="tab-content">
+                            <!-- cart -->
+                            <div class="tab-pane fade active show" id="bloom_cart_1_1">
+                                <div class="shopping-cart-info">
+                                    <div class="row">
+                                        <div class="col-xl-12">
+                                            <div class="shoping-cart-inner">
+                                                <div class="shoping-cart-inner-table">
+                                                    <form action="#">
+                                                        <div class="table-content table-responsive mb-50">
+                                                            <table class="text-center">
+                                                                <tbody>
+                                                                    <!-- tr -->
+                                                                    {% for commande in commandes %}
+                                                                    <tr>
+                                                                        <td class="cart-product-remove">
+                                                                            <a href="{{ path('detailsCommande',{'idCmd': commande.id }) }}"><i class="fa fa-eye pr-2" style="font-size:20px;color:#efa2a9"></i></a>
+                                                                        </td>
+                                                                        <td class="cart-product-thumbnail">
+                                                                            <a href="{{ path('detailsCommande',{'idCmd': commande.id }) }}">La référence de votre Commande {{ commande.id }}</a>
+                                                                        </td>
+                                                                        <td class="cart-product-title">
+                                                                            <h6><a href="product-details.html">Date de la commande {{ commande.orderDate | date('Y-m-d') }}</a></h6>
+                                                                        </td>
+                                                                        <td class="cart-product-price">Total:{{ commande.totalAchat }} DT</td>
+
+
+                                                                    </tr>
+                                                                    <!-- tr -->
+                                                                    {% endfor %}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- shipping -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

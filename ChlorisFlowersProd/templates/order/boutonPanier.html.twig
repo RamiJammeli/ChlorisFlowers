@@ -1,0 +1,11 @@
+<span class="mini-cart-icon header-navbar-active">
+<a  {% if articles != 0 %}  {% else %} {% endif %}  href="{{ path('list_Panier') }}"><i class="ti-shopping-cart"></i>
+    <sup>
+        {% if articles == 0 %}
+            0
+        {% else %}
+            {{ articles }}
+        {% endif %}
+    </sup>
+</a>
+</span>

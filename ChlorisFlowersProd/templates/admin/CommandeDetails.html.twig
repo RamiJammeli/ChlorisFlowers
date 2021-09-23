@@ -1,0 +1,95 @@
+{% extends 'baseAdmin.html.twig' %}
+
+
+{% block body %}
+
+    <!-- Begin Page Content -->
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h2 class="m-0 font-weight-bold">Details Commande</h2>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                        <tr>
+                            <th>Taille Box</th>
+                            <th>Couleur Box</th>
+                            <th>Couleur Rose</th>
+                            <th>Collection</th>
+                            <th>Stock </th>
+                            <th>Carte</th>
+                            <th>Commentaire</th>
+                            <th> Macaron Personnalisé</th>
+                            <th>Quantité </th>
+                            <th>Date Livraison</th>
+                            <th>Type Livraison</th>
+
+                            <th>Etat</th>
+                            <th>Actions</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for item in items %}
+                            <tr>
+                                <td><a >{{ item.idProduit.boxSize }}</a></td>
+                                <td>
+                                    {{ item.idProduit.boxColor }}
+                                </td>
+                                <td>{{ item.idProduit.roseColor}}</td>
+                                <td>{{ item.idProduit.categorie}}</td>
+                                <td>{{ item.idProduit.stock}}</td>
+                                <td>{{ item.card}}</td>
+                                <td>{{ item.commentaire}}</td>
+                                <th>{{item.macaronPersonnalise}}</th>
+                                <td>{{item.quantite}}</td>
+
+                                <td>{{ item.shipdate | date("d/m/Y") }}</td>
+                                {% if item.typeLivraison=="livraisondomicile" %}
+                                    <td>Domicile</td>
+                                {% elseif item.typeLivraison == "livraisonSurpise" %}
+                                    <td>Surprise</td>
+                                {% else %}
+                                    <td>A l'atelier</td>
+                                {% endif %}
+
+
+
+                               <td class="js-status_detail">
+                                    {% if item.status=="En cours" %}
+                                        <a  href="{{  path('change_status_detail', {'idCmd': item.id}) }}"  class="js-status_detail btn btn-warning btn-icon-split">  <span style="color: white" class="js-status_detail text">{{ item.status }}</span>
+                                        </a>
+                                    {% else %}
+                                        <a  href="{{  path('change_status_detail', {'idCmd': item.id}) }}" class="js-status_detail btn btn-success btn-icon-split">  <span style="color: white" class="js-status_detail text">{{ item.status }}</span>
+                                        </a>
+                                    {% endif %}
+
+
+                                </td>
+                                <td class="pr-2">
+
+                                    <a href="{{ path('detailsLivraison',{'idCmd': item.id }) }}"><i class="fa fa-eye pr-2" style="font-size:20px;color:#efa2a9"></i></a>
+
+                                </td>
+
+
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.container-fluid -->
+
+
+
+
+{% endblock %}
