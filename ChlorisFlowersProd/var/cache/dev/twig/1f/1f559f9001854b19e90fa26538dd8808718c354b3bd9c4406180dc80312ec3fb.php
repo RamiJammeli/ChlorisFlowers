@@ -862,6 +862,6 @@ $context["item"], "boxSize", [], "any", false, false, false, 162), "S"))) {
         </div>
     </div>
 {% endblock %}
-", "product/index.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\index.html.twig");
+", "product/index.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\index.html.twig");
     }
 }

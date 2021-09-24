@@ -109,17 +109,26 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
 ";
         // line 358
         $this->displayBlock('footer', $context, $blocks);
+<<<<<<< HEAD
         // line 428
         echo "
 
 ";
         // line 443
+=======
+        // line 431
+        echo "
+
+";
+        // line 446
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo "<!----quantity --->
 
 <!--date --->
 <!----date picker---->
 
 <script src=\"";
+<<<<<<< HEAD
         // line 448
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/jquery-plugins.js"), "html", null, true);
         echo "\"></script>
@@ -129,10 +138,22 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo "\"></script>
 ";
         // line 451
+=======
+        // line 451
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/jquery-plugins.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 452
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/main.js"), "html", null, true);
+        echo "\"></script>
+";
+        // line 454
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/popper.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
+<<<<<<< HEAD
         // line 452
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/contact.js"), "html", null, true);
         echo "\"></script>
@@ -154,6 +175,29 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo "\"></script>
 <script src=\"";
         // line 457
+=======
+        // line 455
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/contact.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 456
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/codingeek-link.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 457
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/codingeek.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 458
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/app.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 459
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/axios.js"), "html", null, true);
+        echo "\"></script>
+<script src=\"";
+        // line 460
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/sweetalert2.js"), "html", null, true);
         echo "\"></script>
 
@@ -209,7 +253,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         axios({
             method: 'post',
             url: '";
+<<<<<<< HEAD
         // line 510
+=======
+        // line 513
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_order");
         echo "',
             data: body
@@ -223,7 +271,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                 });
             } else {
                 window.location.replace('";
+<<<<<<< HEAD
         // line 521
+=======
+        // line 524
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("MesCommandes");
         echo "');
             }
@@ -241,7 +293,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         };
         axios({
             url: '";
+<<<<<<< HEAD
         // line 536
+=======
+        // line 539
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop_removefromcart");
         echo "',
             data: body,
@@ -888,8 +944,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/logo1.png"), "html", null, true);
         echo "\" alt=\"footer logo\">
                                 </a>
-                                <p>Flowers always make people better, happier, they are sunshine and medicine for the
-                                    soul.</p>
+                                <p>Flowers always make people better, happier, they are sunshine and medicine for the soul.</p>
                                 <address><a href=\"tel:+0123456789\">+216 21900767 / +216 21184775</a> <br><a href=\"mailto:info@bloom.com\">Flowerschloris@gmail.com</a></address>
                                 <div class=\"social_share\">
                                     <ul>
@@ -905,7 +960,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                     <div class=\"col-xl-2 col-lg-6 col-md-6\">
                         <div class=\"footer-widget widget widget_text text-center mobile-text-left\">
                             <h4 class=\"widget-title\">Horaire de Travail</h4>
-                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Closed </p>
+                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         </div>
                     </div>
                     <div class=\"col-xl-2 col-lg-3 col-md-3\">
@@ -928,7 +983,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                     <input type=\"text\" placeholder=\"Enter your emaSoyez parmi les premiers à recevoir et bénéficier de nos ventes tout compris chaque semaine.il address\">
                                     <button type=\"submit\"><img
                                                 src=\"";
+<<<<<<< HEAD
         // line 408
+=======
+        // line 411
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/icon/arrow-right-white-2.svg"), "html", null, true);
         echo "\"
                                                 alt=\"Arrow Icon\"></button>
@@ -970,7 +1029,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
 
     public function getDebugInfo()
     {
+<<<<<<< HEAD
         return array (  932 => 408,  888 => 367,  878 => 359,  868 => 358,  850 => 356,  833 => 351,  830 => 350,  826 => 349,  815 => 341,  809 => 338,  798 => 330,  790 => 324,  787 => 323,  773 => 315,  769 => 314,  761 => 309,  754 => 305,  747 => 301,  742 => 299,  739 => 298,  734 => 297,  732 => 296,  721 => 287,  719 => 286,  716 => 285,  714 => 284,  703 => 276,  691 => 267,  680 => 258,  673 => 255,  667 => 252,  663 => 251,  659 => 250,  653 => 248,  651 => 247,  636 => 235,  631 => 233,  621 => 225,  615 => 222,  611 => 220,  609 => 219,  605 => 218,  601 => 217,  596 => 215,  586 => 208,  582 => 207,  565 => 193,  561 => 192,  528 => 162,  515 => 152,  510 => 150,  505 => 148,  470 => 116,  461 => 110,  427 => 79,  414 => 69,  409 => 67,  404 => 65,  369 => 32,  359 => 31,  340 => 21,  321 => 14,  245 => 536,  227 => 521,  213 => 510,  157 => 457,  153 => 456,  149 => 455,  145 => 454,  141 => 453,  137 => 452,  132 => 451,  128 => 449,  124 => 448,  117 => 443,  113 => 428,  111 => 358,  108 => 357,  106 => 356,  103 => 355,  101 => 31,  90 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  66 => 14,  57 => 8,  48 => 1,);
+=======
+        return array (  939 => 411,  896 => 371,  886 => 363,  876 => 362,  858 => 360,  841 => 355,  838 => 354,  834 => 353,  823 => 345,  817 => 342,  806 => 334,  798 => 328,  795 => 327,  781 => 319,  777 => 318,  769 => 313,  762 => 309,  755 => 305,  750 => 303,  747 => 302,  742 => 301,  740 => 300,  729 => 291,  727 => 290,  724 => 289,  722 => 288,  711 => 280,  699 => 271,  688 => 262,  682 => 259,  678 => 258,  673 => 255,  667 => 252,  663 => 251,  659 => 250,  653 => 248,  651 => 247,  636 => 235,  631 => 233,  621 => 225,  615 => 222,  611 => 220,  609 => 219,  605 => 218,  601 => 217,  596 => 215,  586 => 208,  582 => 207,  565 => 193,  561 => 192,  528 => 162,  515 => 152,  510 => 150,  505 => 148,  470 => 116,  461 => 110,  427 => 79,  414 => 69,  409 => 67,  404 => 65,  369 => 32,  359 => 31,  340 => 21,  321 => 14,  245 => 539,  227 => 524,  213 => 513,  157 => 460,  153 => 459,  149 => 458,  145 => 457,  141 => 456,  137 => 455,  132 => 454,  128 => 452,  124 => 451,  117 => 446,  113 => 431,  111 => 362,  108 => 361,  106 => 360,  103 => 359,  101 => 31,  90 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  66 => 14,  57 => 8,  48 => 1,);
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
     }
 
     public function getSourceContext()
@@ -1343,8 +1406,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                 <a href=\"index-2.html\" class=\"footer-logo\">
                                     <img src=\"{{ asset('client/img/logo1.png') }}\" alt=\"footer logo\">
                                 </a>
-                                <p>Flowers always make people better, happier, they are sunshine and medicine for the
-                                    soul.</p>
+                                <p>Flowers always make people better, happier, they are sunshine and medicine for the soul.</p>
                                 <address><a href=\"tel:+0123456789\">+216 21900767 / +216 21184775</a> <br><a href=\"mailto:info@bloom.com\">Flowerschloris@gmail.com</a></address>
                                 <div class=\"social_share\">
                                     <ul>
@@ -1360,7 +1422,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                     <div class=\"col-xl-2 col-lg-6 col-md-6\">
                         <div class=\"footer-widget widget widget_text text-center mobile-text-left\">
                             <h4 class=\"widget-title\">Horaire de Travail</h4>
-                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Closed </p>
+                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         </div>
                     </div>
                     <div class=\"col-xl-2 col-lg-3 col-md-3\">

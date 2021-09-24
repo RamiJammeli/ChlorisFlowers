@@ -501,6 +501,9 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/D6gdxBsMXx/Z/Q/nvuSefi4ahKHn+bywLCg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/D6gdxBsMXx/Z/R/lTv3clhBqMZmEpsBaCvg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/D6gdxBsMXx/Z/Y/NX9i-Ib8cErVwarmVExw" beforeDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/templates/accueil/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accueil/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/aBBVHzQI0H/+/A/DV+kAn4Zpf8JbuX4TJXQ" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/aBBVHzQI0H/+/G/5mD8ktZxk6XfZGgMLdEg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/pools/aBBVHzQI0H/+/U/VNr0yPIz-m7qMfii99mw" beforeDir="false" />
@@ -2776,6 +2779,10 @@
       <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/fc/fc5743ddd8611edc50188f1a9d553d04c1b254a622baafbf3d682e9a3c7595e2.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/fc/fc5743ddd8611edc50188f1a9d553d04c1b254a622baafbf3d682e9a3c7595e2.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/validation.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/validation.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/cache/dev/webpack_encore.cache.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/webpack_encore.cache.php" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/3e/3e824dadc35085a70f2c6183bee41192cca4009fe2d7bcc81fc915f235b16016.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/3e/3e824dadc35085a70f2c6183bee41192cca4009fe2d7bcc81fc915f235b16016.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/twig/8a/8a3f3d951b4e5915604e4b2b17e3df7a4d92b17820323355d873b9203c9262fa.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/twig/8a/8a3f3d951b4e5915604e4b2b17e3df7a4d92b17820323355d873b9203c9262fa.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -2945,6 +2952,7 @@
       <workItem from="1632402996720" duration="965000" />
       <workItem from="1632404147718" duration="4093000" />
       <workItem from="1632480930340" duration="495000" />
+      <workItem from="1632404147718" duration="8934000" />
     </task>
     <servers />
   </component>
@@ -2964,5 +2972,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="390" y="125" width="586" height="488" key="find.popup/0.0.1366.738@0.0.1366.738" timestamp="1632415839816" />
+
+    <state x="379" y="99" width="607" height="536" key="find.popup" timestamp="1632413729386">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="379" y="99" width="607" height="536" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1632413729386" />
   </component>
 </project>

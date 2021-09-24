@@ -380,6 +380,10 @@ class __TwigTemplate_32557ed350425064e5dbeeccbab93f826baee8511b2335329e9533de484
 
 
 {% endblock %}
+<<<<<<< HEAD
 ", "admin/editProduct.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\admin\\editProduct.html.twig");
+=======
+", "admin/editProduct.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\admin\\editProduct.html.twig");
+>>>>>>> e7019b5435f71a0de8fadee0035ccae69f560518
     }
 }
