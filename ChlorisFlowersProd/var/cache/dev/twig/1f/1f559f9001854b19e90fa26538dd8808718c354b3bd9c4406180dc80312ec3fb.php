@@ -200,7 +200,7 @@ class __TwigTemplate_8b5c26d416dc5d2321461f77be5a3abcb0deacedb274121cf3f7d8ecded
                                                             </div>
                                                                 <div class=\"product-badge\">
                                                                     <ul>
-                                                                        <li class=\"sale-badge\">Sold Out</li>
+                                                                        <li class=\"sale-badge\">Epuisé</li>
                                                                     </ul>
                                                                 </div>
                                                         </div>
@@ -222,7 +222,7 @@ $context["item"], "stock", [], "any", false, false, false, 121), 0)) || (-1 === 
                                                             </div>
                                                                 <div class=\"product-badge\">
                                                                     <ul>
-                                                                        <li class=\"sale-badge\">Sold Out</li>
+                                                                        <li class=\"sale-badge\">Epuisé</li>
                                                                     </ul>
                                                                 </div>
                                                         </div>
@@ -445,10 +445,10 @@ $context["item"], "boxSize", [], "any", false, false, false, 162), "S"))) {
                                     </div>
                                     <!-- price-filter-widget -->
                                     <div class=\"widget price-filter-widget\">
-                                        <h4 class=\"widget-title\">Price Range</h4>
+                                        <h4 class=\"widget-title\">Prix</h4>
                                         <div class=\"price_filter\">
                                             <div class=\"price_slider_amount\">
-                                                <input type=\"submit\"  value=\"Your range:\"/>
+                                                <input type=\"submit\"  value=\"min-max:\"/>
                                                 <input type=\"text\" id=\"amount\" name=\"price\"  value=\"\" min=\"\" max=\"\" placeholder=\"Add Your Price\" />
                                             </div>
                                             <div id=\"slider-range\"></div>
@@ -610,7 +610,7 @@ $context["item"], "boxSize", [], "any", false, false, false, 162), "S"))) {
                                                             </div>
                                                                 <div class=\"product-badge\">
                                                                     <ul>
-                                                                        <li class=\"sale-badge\">Sold Out</li>
+                                                                        <li class=\"sale-badge\">Epuisé</li>
                                                                     </ul>
                                                                 </div>
                                                         </div>
@@ -625,7 +625,7 @@ $context["item"], "boxSize", [], "any", false, false, false, 162), "S"))) {
                                                             </div>
                                                                 <div class=\"product-badge\">
                                                                     <ul>
-                                                                        <li class=\"sale-badge\">Sold Out</li>
+                                                                        <li class=\"sale-badge\">Epuisé</li>
                                                                     </ul>
                                                                 </div>
                                                         </div>
@@ -786,10 +786,10 @@ $context["item"], "boxSize", [], "any", false, false, false, 162), "S"))) {
                                     </div>
                                     <!-- price-filter-widget -->
                                     <div class=\"widget price-filter-widget\">
-                                        <h4 class=\"widget-title\">Price Range</h4>
+                                        <h4 class=\"widget-title\">Prix</h4>
                                         <div class=\"price_filter\">
                                             <div class=\"price_slider_amount\">
-                                                <input type=\"submit\"  value=\"Your range:\"/>
+                                                <input type=\"submit\"  value=\"min-max:\"/>
                                                 <input type=\"text\" id=\"amount\" name=\"price\"  value=\"\" min=\"\" max=\"\" placeholder=\"Add Your Price\" />
                                             </div>
                                             <div id=\"slider-range\"></div>
@@ -862,6 +862,6 @@ $context["item"], "boxSize", [], "any", false, false, false, 162), "S"))) {
         </div>
     </div>
 {% endblock %}
-", "product/index.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\index.html.twig");
+", "product/index.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\index.html.twig");
     }
 }
