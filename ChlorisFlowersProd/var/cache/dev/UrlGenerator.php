@@ -39,7 +39,7 @@ return [
     'Product_new' => [[], ['_controller' => 'App\\Controller\\ProductController::new'], [], [['text', '/product/new']], [], []],
     'Product_delete' => [['id'], ['_controller' => 'App\\Controller\\ProductController::delete'], [], [['variable', '/', '[^/]++', 'id'], ['text', '/product/delete']], [], []],
     'list_collection' => [[], ['_controller' => 'App\\Controller\\ProductController::ListCategorie'], [], [['text', '/product/collection']], [], []],
-    'registration' => [[], ['_controller' => 'App\\Controller\\RegistrationController::index'], [], [['text', '/registration']], [], []],
+    'registration' => [[], ['_controller' => 'App\\Controller\\RegistrationController::index'], [], [['text', '/connecter']], [], []],
     'profil' => [[], ['_controller' => 'App\\Controller\\RegistrationController::Profil'], [], [['text', '/profil']], [], []],
     'security' => [[], ['_controller' => 'App\\Controller\\SecurityController::index'], [], [['text', '/security']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
