@@ -35,7 +35,7 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
-
+use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 use SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface;
 
 
@@ -64,7 +64,7 @@ class RegistrationController extends AbstractController
 
     /**
 
-     * @Route("/registration", name="registration")
+     * @Route("/connecter", name="registration")
 
      * @param Request $request
 
@@ -76,10 +76,14 @@ class RegistrationController extends AbstractController
 
      */
 
-    public function index(Request $request,Swift_Mailer $mailer,LoggerInterface $logger)
+    public function index(Request $request,AuthenticationUtils $authenticationUtils,Swift_Mailer $mailer,LoggerInterface $logger)
 
     {
-
+        $errorformrefresh=0;
+        // get the login error if there is one
+        $error = $authenticationUtils->getLastAuthenticationError();
+        // last username entered by the user
+        $lastUsername = $authenticationUtils->getLastUsername();
         $user = new User();
 
 
@@ -110,7 +114,7 @@ class RegistrationController extends AbstractController
 
             $em = $this->getDoctrine()->getManager();
 
-          $em->persist($user);
+            $em->persist($user);
 
             $em->flush();
 
@@ -122,15 +126,21 @@ class RegistrationController extends AbstractController
 
 
 
-            return $this->redirectToRoute('app_login');
+            return $this->redirectToRoute('registration');
 
+        }
+        else{
+            if ($form->isSubmitted() && !$form->isValid())
+                $errorformrefresh=1;
         }
 
 
-
-        return $this->render('registration/index.html.twig', [
+        return $this->render('security/login.html.twig', [
 
             'form' => $form->createView(),
+            'last_username' => $lastUsername,
+            'error' => $error,
+            'errorformInscri' => $errorformrefresh
 
         ]);
 
