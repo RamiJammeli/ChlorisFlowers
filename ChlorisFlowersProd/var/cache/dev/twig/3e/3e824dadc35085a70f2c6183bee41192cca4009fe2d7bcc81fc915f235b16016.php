@@ -286,7 +286,7 @@ class __TwigTemplate_f655522a8b571e9fd350fe34283381b3ba49f3e8a8f42fbb599c9c61139
         echo "\" alt=\"Bloom\">
                             </div>
                             <div class=\"title-text\">
-                                <h2 class=\"title\">Follow us on instagram</h2>
+                                <h2 class=\"title\">Suivez-nous sur instagram</h2>
                             </div>
                         </div>
                     </div>
@@ -506,7 +506,7 @@ class __TwigTemplate_f655522a8b571e9fd350fe34283381b3ba49f3e8a8f42fbb599c9c61139
                                 <img src=\"{{ asset( 'client/img/icon/title.svg')}}\" alt=\"Bloom\">
                             </div>
                             <div class=\"title-text\">
-                                <h2 class=\"title\">Follow us on instagram</h2>
+                                <h2 class=\"title\">Suivez-nous sur instagram</h2>
                             </div>
                         </div>
                     </div>

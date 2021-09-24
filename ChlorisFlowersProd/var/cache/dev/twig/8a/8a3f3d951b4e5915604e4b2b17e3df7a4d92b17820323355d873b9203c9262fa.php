@@ -109,51 +109,51 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
 ";
         // line 362
         $this->displayBlock('footer', $context, $blocks);
-        // line 432
+        // line 431
         echo "
 
 ";
-        // line 447
+        // line 446
         echo "<!----quantity --->
 
 <!--date --->
 <!----date picker---->
 
 <script src=\"";
-        // line 452
+        // line 451
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/jquery-plugins.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 453
+        // line 452
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/main.js"), "html", null, true);
         echo "\"></script>
 ";
-        // line 455
+        // line 454
         echo "<script src=\"";
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/popper.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 456
+        // line 455
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/contact.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 457
+        // line 456
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/codingeek-link.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 458
+        // line 457
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/codingeek.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 459
+        // line 458
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/app.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 460
+        // line 459
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/axios.js"), "html", null, true);
         echo "\"></script>
 <script src=\"";
-        // line 461
+        // line 460
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/js/sweetalert2.js"), "html", null, true);
         echo "\"></script>
 
@@ -209,7 +209,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         axios({
             method: 'post',
             url: '";
-        // line 514
+        // line 513
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("add_order");
         echo "',
             data: body
@@ -223,7 +223,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                 });
             } else {
                 window.location.replace('";
-        // line 525
+        // line 524
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("MesCommandes");
         echo "');
             }
@@ -241,7 +241,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         };
         axios({
             url: '";
-        // line 540
+        // line 539
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("shop_removefromcart");
         echo "',
             data: body,
@@ -896,8 +896,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/logo1.png"), "html", null, true);
         echo "\" alt=\"footer logo\">
                                 </a>
-                                <p>Flowers always make people better, happier, they are sunshine and medicine for the
-                                    soul.</p>
+                                <p>Flowers always make people better, happier, they are sunshine and medicine for the soul.</p>
                                 <address><a href=\"tel:+0123456789\">+216 21900767 / +216 21184775</a> <br><a href=\"mailto:info@bloom.com\">Flowerschloris@gmail.com</a></address>
                                 <div class=\"social_share\">
                                     <ul>
@@ -913,7 +912,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                     <div class=\"col-xl-2 col-lg-6 col-md-6\">
                         <div class=\"footer-widget widget widget_text text-center mobile-text-left\">
                             <h4 class=\"widget-title\">Horaire de Travail</h4>
-                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Closed </p>
+                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         </div>
                     </div>
                     <div class=\"col-xl-2 col-lg-3 col-md-3\">
@@ -936,7 +935,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                     <input type=\"text\" placeholder=\"Enter your emaSoyez parmi les premiers à recevoir et bénéficier de nos ventes tout compris chaque semaine.il address\">
                                     <button type=\"submit\"><img
                                                 src=\"";
-        // line 412
+        // line 411
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/icon/arrow-right-white-2.svg"), "html", null, true);
         echo "\"
                                                 alt=\"Arrow Icon\"></button>
@@ -978,7 +977,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
 
     public function getDebugInfo()
     {
-        return array (  940 => 412,  896 => 371,  886 => 363,  876 => 362,  858 => 360,  841 => 355,  838 => 354,  834 => 353,  823 => 345,  817 => 342,  806 => 334,  798 => 328,  795 => 327,  781 => 319,  777 => 318,  769 => 313,  762 => 309,  755 => 305,  750 => 303,  747 => 302,  742 => 301,  740 => 300,  729 => 291,  727 => 290,  724 => 289,  722 => 288,  711 => 280,  699 => 271,  688 => 262,  682 => 259,  678 => 258,  673 => 255,  667 => 252,  663 => 251,  659 => 250,  653 => 248,  651 => 247,  636 => 235,  631 => 233,  621 => 225,  615 => 222,  611 => 220,  609 => 219,  605 => 218,  601 => 217,  596 => 215,  586 => 208,  582 => 207,  565 => 193,  561 => 192,  528 => 162,  515 => 152,  510 => 150,  505 => 148,  470 => 116,  461 => 110,  427 => 79,  414 => 69,  409 => 67,  404 => 65,  369 => 32,  359 => 31,  340 => 21,  321 => 14,  245 => 540,  227 => 525,  213 => 514,  157 => 461,  153 => 460,  149 => 459,  145 => 458,  141 => 457,  137 => 456,  132 => 455,  128 => 453,  124 => 452,  117 => 447,  113 => 432,  111 => 362,  108 => 361,  106 => 360,  103 => 359,  101 => 31,  90 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  66 => 14,  57 => 8,  48 => 1,);
+        return array (  939 => 411,  896 => 371,  886 => 363,  876 => 362,  858 => 360,  841 => 355,  838 => 354,  834 => 353,  823 => 345,  817 => 342,  806 => 334,  798 => 328,  795 => 327,  781 => 319,  777 => 318,  769 => 313,  762 => 309,  755 => 305,  750 => 303,  747 => 302,  742 => 301,  740 => 300,  729 => 291,  727 => 290,  724 => 289,  722 => 288,  711 => 280,  699 => 271,  688 => 262,  682 => 259,  678 => 258,  673 => 255,  667 => 252,  663 => 251,  659 => 250,  653 => 248,  651 => 247,  636 => 235,  631 => 233,  621 => 225,  615 => 222,  611 => 220,  609 => 219,  605 => 218,  601 => 217,  596 => 215,  586 => 208,  582 => 207,  565 => 193,  561 => 192,  528 => 162,  515 => 152,  510 => 150,  505 => 148,  470 => 116,  461 => 110,  427 => 79,  414 => 69,  409 => 67,  404 => 65,  369 => 32,  359 => 31,  340 => 21,  321 => 14,  245 => 539,  227 => 524,  213 => 513,  157 => 460,  153 => 459,  149 => 458,  145 => 457,  141 => 456,  137 => 455,  132 => 454,  128 => 452,  124 => 451,  117 => 446,  113 => 431,  111 => 362,  108 => 361,  106 => 360,  103 => 359,  101 => 31,  90 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  66 => 14,  57 => 8,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -1355,8 +1354,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                 <a href=\"index-2.html\" class=\"footer-logo\">
                                     <img src=\"{{ asset('client/img/logo1.png') }}\" alt=\"footer logo\">
                                 </a>
-                                <p>Flowers always make people better, happier, they are sunshine and medicine for the
-                                    soul.</p>
+                                <p>Flowers always make people better, happier, they are sunshine and medicine for the soul.</p>
                                 <address><a href=\"tel:+0123456789\">+216 21900767 / +216 21184775</a> <br><a href=\"mailto:info@bloom.com\">Flowerschloris@gmail.com</a></address>
                                 <div class=\"social_share\">
                                     <ul>
@@ -1372,7 +1370,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                     <div class=\"col-xl-2 col-lg-6 col-md-6\">
                         <div class=\"footer-widget widget widget_text text-center mobile-text-left\">
                             <h4 class=\"widget-title\">Horaire de Travail</h4>
-                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Closed </p>
+                            <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         </div>
                     </div>
                     <div class=\"col-xl-2 col-lg-3 col-md-3\">
