@@ -524,6 +524,6 @@ class __TwigTemplate_f655522a8b571e9fd350fe34283381b3ba49f3e8a8f42fbb599c9c61139
     </div>
     <!-- Instagram area end -->
 
-{% endblock %}", "accueil/index.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\accueil\\index.html.twig");
+{% endblock %}", "accueil/index.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\accueil\\index.html.twig");
     }
 }

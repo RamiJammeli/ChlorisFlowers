@@ -252,12 +252,8 @@
                                     <li><a href="{{ path('app_logout') }}">Déconnexion</a></li>
                                 </ul>
                             {% else %}
-                                <span>Se Connecter</span>
-                                <ul>
+                                <span><a href="{{ path('registration') }}">Se connecter</a></span>
 
-                                    <li><a href="{{ path('registration') }}">S'inscrire</a></li>
-                                    <li><a href="{{ path('app_login') }}">S'identifier</a></li>
-                                </ul>
                             {% endif %}
                         </li>
                     </ul>

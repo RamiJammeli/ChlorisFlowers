@@ -25,7 +25,7 @@ return [
         '/admin/add' => [[['_route' => 'AddProductAdmin', '_controller' => 'App\\Controller\\ProductAdminController::AjoutProduit'], null, null, null, false, false, null]],
         '/product/new' => [[['_route' => 'Product_new', '_controller' => 'App\\Controller\\ProductController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/product/collection' => [[['_route' => 'list_collection', '_controller' => 'App\\Controller\\ProductController::ListCategorie'], null, null, null, false, false, null]],
-        '/registration' => [[['_route' => 'registration', '_controller' => 'App\\Controller\\RegistrationController::index'], null, null, null, false, false, null]],
+        '/connecter' => [[['_route' => 'registration', '_controller' => 'App\\Controller\\RegistrationController::index'], null, null, null, false, false, null]],
         '/profil' => [[['_route' => 'profil', '_controller' => 'App\\Controller\\RegistrationController::Profil'], null, null, null, false, false, null]],
         '/security' => [[['_route' => 'security', '_controller' => 'App\\Controller\\SecurityController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
