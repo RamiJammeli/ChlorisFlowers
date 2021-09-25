@@ -258,7 +258,7 @@ class __TwigTemplate_a6c2b8987f2d6d6c241435da9c0f7cfb5f67d736daaca883ee1fa16b558
         echo "\" alt=\"Bloom\">
                             </div>
                             <div class=\"title-text\">
-                                <h2 class=\"title\">Follow us on instagram</h2>
+                                <h2 class=\"title\">Suivez-nous sur instagram</h2>
                             </div>
                         </div>
                     </div>
@@ -447,7 +447,7 @@ class __TwigTemplate_a6c2b8987f2d6d6c241435da9c0f7cfb5f67d736daaca883ee1fa16b558
                                 <img src=\"{{ asset('client/img/icon/title.svg') }}\" alt=\"Bloom\">
                             </div>
                             <div class=\"title-text\">
-                                <h2 class=\"title\">Follow us on instagram</h2>
+                                <h2 class=\"title\">Suivez-nous sur instagram</h2>
                             </div>
                         </div>
                     </div>
@@ -460,6 +460,6 @@ class __TwigTemplate_a6c2b8987f2d6d6c241435da9c0f7cfb5f67d736daaca883ee1fa16b558
     </div>
     <!-- Instagram area end -->
 {% endblock %}
-", "registration/profil.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\registration\\profil.html.twig");
+", "registration/profil.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\registration\\profil.html.twig");
     }
 }

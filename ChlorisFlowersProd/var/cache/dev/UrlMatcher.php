@@ -16,21 +16,24 @@ return [
         '/' => [[['_route' => 'accueil', '_controller' => 'App\\Controller\\AccueilController::index'], null, null, null, false, false, null]],
         '/behind_the_brand' => [[['_route' => 'behind_the_brand', '_controller' => 'App\\Controller\\AccueilController::aboutUs'], null, null, null, false, false, null]],
         '/tableau_dimension' => [[['_route' => 'tableau_dimension', '_controller' => 'App\\Controller\\AccueilController::dimension'], null, null, null, false, false, null]],
-        '/admin/list' => [[['_route' => 'listCommande', '_controller' => 'App\\Controller\\CommandeAdminController::List'], null, null, null, false, false, null]],
+        '/adminx/list' => [[['_route' => 'listCommande', '_controller' => 'App\\Controller\\CommandeAdminController::List'], null, null, null, false, false, null]],
+        '/adminx/DownloadCsvCommande' => [[['_route' => 'downloadcsv', '_controller' => 'App\\Controller\\CommandeAdminController::DownloadCsvCommande'], null, null, null, true, false, null]],
         '/order/panier' => [[['_route' => 'list_Panier', '_controller' => 'App\\Controller\\OrderController::listPanier'], null, null, null, false, false, null]],
         '/order/shop_removefromcart' => [[['_route' => 'shop_removefromcart', '_controller' => 'App\\Controller\\OrderController::DeleteFromCartAction'], null, null, null, false, false, null]],
         '/order/addOrder' => [[['_route' => 'add_order', '_controller' => 'App\\Controller\\OrderController::addOrder'], null, null, null, false, false, null]],
         '/order/MesCommandes' => [[['_route' => 'MesCommandes', '_controller' => 'App\\Controller\\OrderController::MesCommandes'], null, null, null, false, false, null]],
-        '/admin' => [[['_route' => 'listProduitAdmin', '_controller' => 'App\\Controller\\ProductAdminController::ListProduct'], null, null, null, true, false, null]],
-        '/admin/add' => [[['_route' => 'AddProductAdmin', '_controller' => 'App\\Controller\\ProductAdminController::AjoutProduit'], null, null, null, false, false, null]],
+        '/adminw' => [[['_route' => 'listProduitAdmin', '_controller' => 'App\\Controller\\ProductAdminController::ListProduct'], null, null, null, true, false, null]],
+        '/adminw/add' => [[['_route' => 'AddProductAdmin', '_controller' => 'App\\Controller\\ProductAdminController::AjoutProduit'], null, null, null, false, false, null]],
         '/product/new' => [[['_route' => 'Product_new', '_controller' => 'App\\Controller\\ProductController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/product/collection' => [[['_route' => 'list_collection', '_controller' => 'App\\Controller\\ProductController::ListCategorie'], null, null, null, false, false, null]],
         '/connecter' => [[['_route' => 'registration', '_controller' => 'App\\Controller\\RegistrationController::index'], null, null, null, false, false, null]],
         '/profil' => [[['_route' => 'profil', '_controller' => 'App\\Controller\\RegistrationController::Profil'], null, null, null, false, false, null]],
+        '/resetpassword' => [[['_route' => 'resetpassword', '_controller' => 'App\\Controller\\RegistrationController::resetpassword'], null, null, null, false, false, null]],
         '/security' => [[['_route' => 'security', '_controller' => 'App\\Controller\\SecurityController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/keep/alive' => [[['_route' => 'security_keep_alive', '_controller' => 'App\\Controller\\SecurityController::keepAlive'], null, null, null, true, false, null]],
+        '/sendmail' => [[['_route' => 'sendmail', '_controller' => 'App\\Controller\\SecurityController::sendmail'], null, null, null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -49,30 +52,35 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/admin/(?'
-                    .'|detail(?'
-                        .'|Admin/([^/]++)(*:202)'
-                        .'|Livraison/([^/]++)(*:228)'
+                .'|/admin(?'
+                    .'|x/(?'
+                        .'|detail(?'
+                            .'|Admin/([^/]++)(*:206)'
+                            .'|Livraison/([^/]++)(*:232)'
+                        .')'
+                        .'|ChangeStatus(?'
+                            .'|/([^/]++)(*:265)'
+                            .'|Detail/([^/]++)(*:288)'
+                        .')'
                     .')'
-                    .'|ChangeStatus(?'
-                        .'|/([^/]++)(*:261)'
-                        .'|Detail/([^/]++)(*:284)'
-                        .'|Produit/([^/]++)(*:308)'
+                    .'|w/(?'
+                        .'|edit/([^/]++)(*:316)'
+                        .'|ChangeStatusProduit/([^/]++)(*:352)'
                     .')'
-                    .'|edit/([^/]++)(*:330)'
                 .')'
                 .'|/order/(?'
-                    .'|addPaniers/([^/]++)(*:368)'
-                    .'|removePanier/([^/]++)(*:397)'
-                    .'|detail/([^/]++)(*:420)'
+                    .'|addPaniers/([^/]++)(*:391)'
+                    .'|removePanier/([^/]++)(*:420)'
+                    .'|detail/([^/]++)(*:443)'
                 .')'
                 .'|/product/(?'
-                    .'|List/([^/]++)(*:454)'
+                    .'|List/([^/]++)(*:477)'
                     .'|de(?'
-                        .'|tails/([^/]++)(*:481)'
-                        .'|lete/([^/]++)(*:502)'
+                        .'|tails/([^/]++)(*:504)'
+                        .'|lete/([^/]++)(*:525)'
                     .')'
                 .')'
+                .'|/reset/([^/]++)(*:550)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -83,19 +91,20 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        202 => [[['_route' => 'detailsCommandeAdmin', '_controller' => 'App\\Controller\\CommandeAdminController::Details'], ['idCmd'], null, null, false, true, null]],
-        228 => [[['_route' => 'detailsLivraison', '_controller' => 'App\\Controller\\CommandeAdminController::DetailsLivraison'], ['idCmd'], null, null, false, true, null]],
-        261 => [[['_route' => 'change_status', '_controller' => 'App\\Controller\\CommandeAdminController::ChangeStatusCommande'], ['idCmd'], null, null, false, true, null]],
-        284 => [[['_route' => 'change_status_detail', '_controller' => 'App\\Controller\\CommandeAdminController::ChangeStatusDetailCommande'], ['idCmd'], null, null, false, true, null]],
-        308 => [[['_route' => 'change_status_produit', '_controller' => 'App\\Controller\\ProductAdminController::ChangeStatusProduit'], ['idProduit'], null, null, false, true, null]],
-        330 => [[['_route' => 'ProductAdminedit', '_controller' => 'App\\Controller\\ProductAdminController::edit'], ['id'], null, null, false, true, null]],
-        368 => [[['_route' => 'addPaniers', '_controller' => 'App\\Controller\\OrderController::addPanier2'], ['id'], null, null, false, true, null]],
-        397 => [[['_route' => 'remove_carte', '_controller' => 'App\\Controller\\OrderController::remove'], ['id'], null, null, false, true, null]],
-        420 => [[['_route' => 'detailsCommande', '_controller' => 'App\\Controller\\OrderController::DetailsCommande'], ['idCmd'], null, null, false, true, null]],
-        454 => [[['_route' => 'Listproduct', '_controller' => 'App\\Controller\\ProductController::listeproduit'], ['categorie'], null, null, false, true, null]],
-        481 => [[['_route' => 'product_details', '_controller' => 'App\\Controller\\ProductController::show'], ['id'], ['GET' => 0], null, false, true, null]],
-        502 => [
-            [['_route' => 'Product_delete', '_controller' => 'App\\Controller\\ProductController::delete'], ['id'], ['DELETE' => 0], null, false, true, null],
+        206 => [[['_route' => 'detailsCommandeAdmin', '_controller' => 'App\\Controller\\CommandeAdminController::Details'], ['idCmd'], null, null, false, true, null]],
+        232 => [[['_route' => 'detailsLivraison', '_controller' => 'App\\Controller\\CommandeAdminController::DetailsLivraison'], ['idCmd'], null, null, false, true, null]],
+        265 => [[['_route' => 'change_status', '_controller' => 'App\\Controller\\CommandeAdminController::ChangeStatusCommande'], ['idCmd'], null, null, false, true, null]],
+        288 => [[['_route' => 'change_status_detail', '_controller' => 'App\\Controller\\CommandeAdminController::ChangeStatusDetailCommande'], ['idCmd'], null, null, false, true, null]],
+        316 => [[['_route' => 'ProductAdminedit', '_controller' => 'App\\Controller\\ProductAdminController::edit'], ['id'], null, null, false, true, null]],
+        352 => [[['_route' => 'change_status_produit', '_controller' => 'App\\Controller\\ProductAdminController::ChangeStatusProduit'], ['idProduit'], null, null, false, true, null]],
+        391 => [[['_route' => 'addPaniers', '_controller' => 'App\\Controller\\OrderController::addPanier2'], ['id'], null, null, false, true, null]],
+        420 => [[['_route' => 'remove_carte', '_controller' => 'App\\Controller\\OrderController::remove'], ['id'], null, null, false, true, null]],
+        443 => [[['_route' => 'detailsCommande', '_controller' => 'App\\Controller\\OrderController::DetailsCommande'], ['idCmd'], null, null, false, true, null]],
+        477 => [[['_route' => 'Listproduct', '_controller' => 'App\\Controller\\ProductController::listeproduit'], ['categorie'], null, null, false, true, null]],
+        504 => [[['_route' => 'product_details', '_controller' => 'App\\Controller\\ProductController::show'], ['id'], ['GET' => 0], null, false, true, null]],
+        525 => [[['_route' => 'Product_delete', '_controller' => 'App\\Controller\\ProductController::delete'], ['id'], ['DELETE' => 0], null, false, true, null]],
+        550 => [
+            [['_route' => 'reset', '_controller' => 'App\\Controller\\SecurityController::reset'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -322,6 +322,6 @@ class __TwigTemplate_c8e89b0c7e3150068e41b036ca9c227dea9e608a2adbc76521bda27b8af
         {% endif %}
     </ul>
 {% endif %}
-", "product/paginator.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\paginator.html.twig");
+", "product/paginator.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\paginator.html.twig");
     }
 }

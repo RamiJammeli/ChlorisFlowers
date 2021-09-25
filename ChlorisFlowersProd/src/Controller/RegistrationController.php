@@ -203,7 +203,22 @@ class RegistrationController extends AbstractController
     }
 
 
+    /**
+     * @Route("/resetpassword", name="resetpassword")
+     */
+    public function resetpassword(Request $request)
+    {
+        $id=$request->get('idu');
 
+        $password=$request->get('password');
+
+        $em = $this->getDoctrine()->getManager();
+        $user= $em->getRepository(User::class)->findOneBy(['id' => $id]);
+        $user->setPassword($this->passwordEncoder->encodePassword($user, $password));
+        $em->flush();
+        $this->addFlash('inscription', 'Mot de passe modifié avec succès! connectez vous');
+        return $this->redirectToRoute('registration');
+    }
 
 
 }

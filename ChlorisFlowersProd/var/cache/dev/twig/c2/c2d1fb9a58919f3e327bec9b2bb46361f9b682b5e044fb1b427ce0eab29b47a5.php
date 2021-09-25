@@ -73,7 +73,7 @@ class __TwigTemplate_1ebf6f8d196441d95c71c1a71281ba2319fd264f560658d3055c7449d26
                 <!-- shoping-cart-tab-menu -->
                 <div class=\"col-xl-8 offset-xl-2\">
                     <div class=\"shoping-cart-tab-menu\">
-                         <h4>THANK YOU FOR YOUR ORDER,  ";
+                         <h4>NOUS VOUS REMERCIONS POUR VOTRE COMMANDE,  ";
         // line 11
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "user", [], "any", false, false, false, 11), "nom", [], "any", false, false, false, 11), "html", null, true);
         echo ".</h4>
@@ -195,7 +195,7 @@ class __TwigTemplate_1ebf6f8d196441d95c71c1a71281ba2319fd264f560658d3055c7449d26
                 <!-- shoping-cart-tab-menu -->
                 <div class=\"col-xl-8 offset-xl-2\">
                     <div class=\"shoping-cart-tab-menu\">
-                         <h4>THANK YOU FOR YOUR ORDER,  {{ app.user.nom }}.</h4>
+                         <h4>NOUS VOUS REMERCIONS POUR VOTRE COMMANDE,  {{ app.user.nom }}.</h4>
                                                 <div class=\"shipping-summery-brief\">
 
                                                 </div>
@@ -254,6 +254,6 @@ class __TwigTemplate_1ebf6f8d196441d95c71c1a71281ba2319fd264f560658d3055c7449d26
         </div>
     </div>
 
-{% endblock %}", "order/MesCommandes.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\order\\MesCommandes.html.twig");
+{% endblock %}", "order/MesCommandes.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\order\\MesCommandes.html.twig");
     }
 }

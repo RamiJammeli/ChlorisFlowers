@@ -32,6 +32,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
             'navBar' => [$this, 'block_navBar'],
             'body' => [$this, 'block_body'],
             'footer' => [$this, 'block_footer'],
+            'script' => [$this, 'block_script'],
         ];
     }
 
@@ -305,8 +306,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         }
     }
 </script>
-
-</body>
+";
+        // line 596
+        $this->displayBlock('script', $context, $blocks);
+        // line 599
+        echo "</body>
 </html>
 ";
         
@@ -471,19 +475,19 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo "\" alt=\"Bloom\">
                                 </div>
                                 <div class=\"title-text\">
-                                    <h2 class=\"title\">Send a message</h2>
+                                    <h2 class=\"title\">Envoyer un message</h2>
                                 </div>
                             </div>
                         </div>
                         <form action=\"#\" class=\"message-popup-form\">
-                            <label>Full name*</label>
+                            <label>Nom et Prénom</label>
                             <input type=\"text\" name=\"name\">
-                            <label>Email address*</label>
+                            <label>Adresse Email</label>
                             <input type=\"email\" name=\"email\">
-                            <label>Insert message</label>
+                            <label>Votre message</label>
                             <textarea name=\"message\"></textarea>
                             <div class=\"btn-wrapper\">
-                                <button class=\"boxed-btn btn-rounded\" type=\"submit\">Send message</button>
+                                <button class=\"boxed-btn btn-rounded\" type=\"submit\">Envoyer Message</button>
                             </div>
                         </form>
                     </div>
@@ -529,11 +533,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo "\" alt=\"Bloom\">
                                 </div>
                                 <div class=\"title-text\">
-                                    <h2 class=\"title\">Working hours</h2>
+                                    <h2 class=\"title\">Horaire de Travail</h2>
                                 </div>
                             </div>
                         </div>
-                        <p>Monday - Friday: 9AM - 4PM <br> Saturday: 9Am - 1PM <br> Sunday: Closed </p>
+                        <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         <div class=\"social_share\">
                             <ul>
                                 <li><a href=\"https://www.instagram.com/codingeeknet\" target=\"_blank\"><i
@@ -703,7 +707,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         echo "\" alt=\"Bloom\">
                             </div>
                             <div class=\"title-text\">
-                                <h2 class=\"title\">My orders</h2>
+                                <h2 class=\"title\">Mes achats</h2>
                             </div>
                         </div>
                     </div>
@@ -923,7 +927,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                 <h4 class=\"widget-title\">Nous Contacter</h4>
                                 <p>Soyez parmi les premiers à recevoir et bénéficier de nos ventes de chaque semaine.</p>
                                 <form action=\"#\" class=\"form-input-box\">
-                                    <input type=\"text\" placeholder=\"Enter your emaSoyez parmi les premiers à recevoir et bénéficier de nos ventes tout compris chaque semaine.il address\">
+                                    <input type=\"text\" placeholder=\"Votre adresse mail\">
                                     <button type=\"submit\"><img
                                                 src=\"";
         // line 406
@@ -956,6 +960,27 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
 
     }
 
+    // line 596
+    public function block_script($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "script"));
+
+        // line 597
+        echo "
+";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
     public function getTemplateName()
     {
         return "base.html.twig";
@@ -968,7 +993,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
 
     public function getDebugInfo()
     {
-        return array (  930 => 406,  887 => 366,  877 => 358,  867 => 357,  849 => 355,  832 => 350,  829 => 349,  825 => 348,  814 => 340,  808 => 337,  797 => 329,  789 => 323,  786 => 322,  772 => 314,  768 => 313,  760 => 308,  753 => 304,  746 => 300,  741 => 298,  738 => 297,  733 => 296,  731 => 295,  720 => 286,  718 => 285,  715 => 284,  713 => 283,  702 => 275,  690 => 266,  679 => 257,  673 => 255,  667 => 252,  663 => 251,  659 => 250,  653 => 248,  651 => 247,  636 => 235,  631 => 233,  621 => 225,  615 => 222,  611 => 220,  609 => 219,  605 => 218,  601 => 217,  596 => 215,  586 => 208,  582 => 207,  565 => 193,  561 => 192,  528 => 162,  515 => 152,  510 => 150,  505 => 148,  470 => 116,  461 => 110,  427 => 79,  414 => 69,  409 => 67,  404 => 65,  369 => 32,  359 => 31,  340 => 21,  321 => 14,  245 => 534,  227 => 519,  213 => 508,  157 => 455,  153 => 454,  149 => 453,  145 => 452,  141 => 451,  137 => 450,  132 => 449,  128 => 447,  124 => 446,  117 => 441,  113 => 426,  111 => 357,  108 => 356,  106 => 355,  103 => 354,  101 => 31,  90 => 22,  88 => 21,  84 => 20,  80 => 19,  76 => 18,  72 => 17,  66 => 14,  57 => 8,  48 => 1,);
+        return array (  974 => 597,  964 => 596,  934 => 406,  891 => 366,  881 => 358,  871 => 357,  853 => 355,  836 => 350,  833 => 349,  829 => 348,  818 => 340,  812 => 337,  801 => 329,  793 => 323,  790 => 322,  776 => 314,  772 => 313,  764 => 308,  757 => 304,  750 => 300,  745 => 298,  742 => 297,  737 => 296,  735 => 295,  724 => 286,  722 => 285,  719 => 284,  717 => 283,  706 => 275,  694 => 266,  683 => 257,  677 => 255,  671 => 252,  667 => 251,  663 => 250,  657 => 248,  655 => 247,  640 => 235,  635 => 233,  625 => 225,  619 => 222,  615 => 220,  613 => 219,  609 => 218,  605 => 217,  600 => 215,  590 => 208,  586 => 207,  569 => 193,  565 => 192,  532 => 162,  519 => 152,  514 => 150,  509 => 148,  474 => 116,  465 => 110,  431 => 79,  418 => 69,  413 => 67,  408 => 65,  373 => 32,  363 => 31,  344 => 21,  325 => 14,  313 => 599,  311 => 596,  246 => 534,  228 => 519,  214 => 508,  158 => 455,  154 => 454,  150 => 453,  146 => 452,  142 => 451,  138 => 450,  133 => 449,  129 => 447,  125 => 446,  118 => 441,  114 => 426,  112 => 357,  109 => 356,  107 => 355,  104 => 354,  102 => 31,  91 => 22,  89 => 21,  85 => 20,  81 => 19,  77 => 18,  73 => 17,  67 => 14,  58 => 8,  49 => 1,);
     }
 
     public function getSourceContext()
@@ -1091,19 +1116,19 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                     <img src=\"{{ asset('client/img/icon/title.svg') }}\" alt=\"Bloom\">
                                 </div>
                                 <div class=\"title-text\">
-                                    <h2 class=\"title\">Send a message</h2>
+                                    <h2 class=\"title\">Envoyer un message</h2>
                                 </div>
                             </div>
                         </div>
                         <form action=\"#\" class=\"message-popup-form\">
-                            <label>Full name*</label>
+                            <label>Nom et Prénom</label>
                             <input type=\"text\" name=\"name\">
-                            <label>Email address*</label>
+                            <label>Adresse Email</label>
                             <input type=\"email\" name=\"email\">
-                            <label>Insert message</label>
+                            <label>Votre message</label>
                             <textarea name=\"message\"></textarea>
                             <div class=\"btn-wrapper\">
-                                <button class=\"boxed-btn btn-rounded\" type=\"submit\">Send message</button>
+                                <button class=\"boxed-btn btn-rounded\" type=\"submit\">Envoyer Message</button>
                             </div>
                         </form>
                     </div>
@@ -1137,11 +1162,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                     <img src=\"{{ asset('client/img/icon/title.svg') }}\" alt=\"Bloom\">
                                 </div>
                                 <div class=\"title-text\">
-                                    <h2 class=\"title\">Working hours</h2>
+                                    <h2 class=\"title\">Horaire de Travail</h2>
                                 </div>
                             </div>
                         </div>
-                        <p>Monday - Friday: 9AM - 4PM <br> Saturday: 9Am - 1PM <br> Sunday: Closed </p>
+                        <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         <div class=\"social_share\">
                             <ul>
                                 <li><a href=\"https://www.instagram.com/codingeeknet\" target=\"_blank\"><i
@@ -1250,7 +1275,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                 <img src=\"{{ asset('client/img/icon/title.svg') }}\" alt=\"Bloom\">
                             </div>
                             <div class=\"title-text\">
-                                <h2 class=\"title\">My orders</h2>
+                                <h2 class=\"title\">Mes achats</h2>
                             </div>
                         </div>
                     </div>
@@ -1376,7 +1401,7 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
                                 <h4 class=\"widget-title\">Nous Contacter</h4>
                                 <p>Soyez parmi les premiers à recevoir et bénéficier de nos ventes de chaque semaine.</p>
                                 <form action=\"#\" class=\"form-input-box\">
-                                    <input type=\"text\" placeholder=\"Enter your emaSoyez parmi les premiers à recevoir et bénéficier de nos ventes tout compris chaque semaine.il address\">
+                                    <input type=\"text\" placeholder=\"Votre adresse mail\">
                                     <button type=\"submit\"><img
                                                 src=\"{{ asset('client/img/icon/arrow-right-white-2.svg') }}\"
                                                 alt=\"Arrow Icon\"></button>
@@ -1568,9 +1593,11 @@ class __TwigTemplate_c2893e8cecd42d9693bd9aeea0e3be77a607b335322f22b8df816fc8907
         }
     }
 </script>
+{% block script %}
 
+{% endblock %}
 </body>
 </html>
-", "base.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\base.html.twig");
+", "base.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\base.html.twig");
     }
 }

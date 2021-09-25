@@ -368,6 +368,6 @@ class __TwigTemplate_c02b83bddb65320802a1f7c0603639034dcbd8582b5384bdfc135c05d5c
             </div>
         </div>
     </div>
-{% endblock %}", "accueil/index2.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\accueil\\index2.html.twig");
+{% endblock %}", "accueil/index2.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\accueil\\index2.html.twig");
     }
 }

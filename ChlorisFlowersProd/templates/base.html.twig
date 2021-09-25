@@ -116,19 +116,19 @@
                                     <img src="{{ asset('client/img/icon/title.svg') }}" alt="Bloom">
                                 </div>
                                 <div class="title-text">
-                                    <h2 class="title">Send a message</h2>
+                                    <h2 class="title">Envoyer un message</h2>
                                 </div>
                             </div>
                         </div>
                         <form action="#" class="message-popup-form">
-                            <label>Full name*</label>
+                            <label>Nom et Prénom</label>
                             <input type="text" name="name">
-                            <label>Email address*</label>
+                            <label>Adresse Email</label>
                             <input type="email" name="email">
-                            <label>Insert message</label>
+                            <label>Votre message</label>
                             <textarea name="message"></textarea>
                             <div class="btn-wrapper">
-                                <button class="boxed-btn btn-rounded" type="submit">Send message</button>
+                                <button class="boxed-btn btn-rounded" type="submit">Envoyer Message</button>
                             </div>
                         </form>
                     </div>
@@ -162,11 +162,11 @@
                                     <img src="{{ asset('client/img/icon/title.svg') }}" alt="Bloom">
                                 </div>
                                 <div class="title-text">
-                                    <h2 class="title">Working hours</h2>
+                                    <h2 class="title">Horaire de Travail</h2>
                                 </div>
                             </div>
                         </div>
-                        <p>Monday - Friday: 9AM - 4PM <br> Saturday: 9Am - 1PM <br> Sunday: Closed </p>
+                        <p>Lundi - Vendredi: 9H - 16H <br> Samedi: 9H - 14H <br> Dimanche: Fermé </p>
                         <div class="social_share">
                             <ul>
                                 <li><a href="https://www.instagram.com/codingeeknet" target="_blank"><i
@@ -275,7 +275,7 @@
                                 <img src="{{ asset('client/img/icon/title.svg') }}" alt="Bloom">
                             </div>
                             <div class="title-text">
-                                <h2 class="title">My orders</h2>
+                                <h2 class="title">Mes achats</h2>
                             </div>
                         </div>
                     </div>
@@ -401,7 +401,7 @@
                                 <h4 class="widget-title">Nous Contacter</h4>
                                 <p>Soyez parmi les premiers à recevoir et bénéficier de nos ventes de chaque semaine.</p>
                                 <form action="#" class="form-input-box">
-                                    <input type="text" placeholder="Enter your emaSoyez parmi les premiers à recevoir et bénéficier de nos ventes tout compris chaque semaine.il address">
+                                    <input type="text" placeholder="Votre adresse mail">
                                     <button type="submit"><img
                                                 src="{{ asset('client/img/icon/arrow-right-white-2.svg') }}"
                                                 alt="Arrow Icon"></button>
@@ -593,6 +593,8 @@
         }
     }
 </script>
+{% block script %}
 
+{% endblock %}
 </body>
 </html>

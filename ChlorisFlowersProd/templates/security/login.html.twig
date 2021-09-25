@@ -9,7 +9,25 @@
         #user_sexe{
             height: 40px;
         }
+
+        #oublier {
+            background: none!important;
+            border: none;
+            padding: 0!important;
+            /*optional*/
+            font-family: arial, sans-serif;
+            /*input has OS specific font-family*/
+            color: #069;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
     </style>
+    <script>
+        function getmail(){
+          document.getElementById('mailhidden').value=document.getElementById('inputEmail').value;
+        }
+    </script>
 {% endblock %}
 {% block body %}
 
@@ -53,7 +71,7 @@
 
 
                                 <label for="inputEmail">Email</label>
-                                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+                                <input type="email" value="{{ last_username }}" onchange="getmail()" name="email" id="inputEmail" class="form-control" required autofocus>
                                 <label for="inputPassword">Password</label>
                                 <input type="password" name="password" id="inputPassword" class="form-control" required>
                                 <div class="btn-wrapper">
@@ -74,6 +92,13 @@
 
 
                             </form>
+
+                            <form method="post" action="{{ path('sendmail') }}">
+                                <input type="hidden" id="mailhidden" name="mailhidden">
+                                <input id="oublier" type="submit" value="Mot de passe oublié?"/>
+                            </form>
+                            <br/> <br/>
+
                             <a href="{{ path('registration') }} ">Vous n'avez pas de compte ? inscrivez vous ici ..</a>
                         </div>
                         {% if errorformInscri==0 %}
@@ -154,5 +179,7 @@
             </div>
         </div>
     </div>
-
+<script>
+    document.getElementById('mailhidden').value=document.getElementById('inputEmail').value;
+    </script>
 {% endblock %}

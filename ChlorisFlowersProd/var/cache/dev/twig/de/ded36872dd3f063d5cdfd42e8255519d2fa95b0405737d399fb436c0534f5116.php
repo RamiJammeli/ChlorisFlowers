@@ -78,7 +78,7 @@ class __TwigTemplate_1339c3143f7fee3a2d0432d0f637a37736e04becf090b7bfbdb56ec364d
                                     <a><img src=\"";
         // line 13
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/tableaudedimension.jpg"), "html", null, true);
-        echo "\" alt=\"Bloom Image\" style=\"height:50%\" ></a>
+        echo "\" alt=\"Bloom Image\" style=\"height:50%;width: 100%\" ></a>
 
 
 
@@ -130,7 +130,7 @@ class __TwigTemplate_1339c3143f7fee3a2d0432d0f637a37736e04becf090b7bfbdb56ec364d
                             <!-- blog-item-2 -->
                             <div class=\"blog-item-2\">
 
-                                    <a><img src=\"{{ asset('client/img/tableaudedimension.jpg') }}\" alt=\"Bloom Image\" style=\"height:50%\" ></a>
+                                    <a><img src=\"{{ asset('client/img/tableaudedimension.jpg') }}\" alt=\"Bloom Image\" style=\"height:50%;width: 100%\" ></a>
 
 
 
@@ -144,6 +144,6 @@ class __TwigTemplate_1339c3143f7fee3a2d0432d0f637a37736e04becf090b7bfbdb56ec364d
             </div>
         </div>
     </div>
-{% endblock %}", "accueil/dimension.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\accueil\\dimension.html.twig");
+{% endblock %}", "accueil/dimension.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\accueil\\dimension.html.twig");
     }
 }

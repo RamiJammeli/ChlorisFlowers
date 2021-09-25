@@ -7,8 +7,11 @@ use App\Entity\LigneCommande;
 use App\Entity\Product;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
+use PhpOffice\PhpSpreadsheet\Spreadsheet;
+use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+use Symfony\Component\HttpFoundation\ResponseHeaderBag;
 /**
- * @Route("/admin")
+ * @Route("/adminx")
  */
 class CommandeAdminController extends AbstractController
 {
@@ -63,7 +66,7 @@ class CommandeAdminController extends AbstractController
     /**
      * @Route("/ChangeStatus/{idCmd}", name="change_status")
      */
-    public function ChangeStatusCommande($idCmd)
+    public function ChangeStatusCommande($idCmd , \Swift_Mailer $mailer)
     {
         $em = $this->getDoctrine()->getManager();
         $Commande= $em->getRepository(Commande::class)->find($idCmd);
@@ -84,6 +87,44 @@ class CommandeAdminController extends AbstractController
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($Commande);
             $entityManager->flush();
+            $user=$Commande->getUser();
+
+
+
+            //send mail
+            $message = (new \Swift_Message('Chloris Flower:Confirmation commande'))
+                ->setFrom('rami.jammeli32@gmail.com')
+                ->setTo($user->getEmail())
+                ->setBody(
+                    '
+           Bonjour '.$user->getPrenom().',
+
+                Votre commande crée le ' .date_format($Commande->getOrderDate(),'Y/m/d').' avec un total de: ' .$Commande->getTotalAchat().'DT,  est en cours de traitement.
+                
+                
+                À bientôt,
+                L\'équipe ChlorisFlowers.
+                '
+                )
+
+                ->addPart(  '
+            <h1 style="color: hotpink;font-family: \'Comic Sans MS\'">CHLORIS FLOWERS</h1> <hr/>
+           <b> Bonjour '.$user->getPrenom().',
+
+               <br/>Votre commande crée le ' .date_format($Commande->getOrderDate(),'Y/m/d').' avec un total de: ' .$Commande->getTotalAchat().'DT,  est en cours de traitement.
+                                
+               <br/> À bientôt,
+               <br/> L\'équipe ChlorisFlowers. </b>
+                ','text/html');
+
+
+
+            $mailer->send($message);
+
+
+
+
+
 
             return $this->json(['code' => 200, 'Status' => $Commande->getStatus()], 200);
 
@@ -134,6 +175,67 @@ class CommandeAdminController extends AbstractController
         }
 
         return $this->json(['code'=>400,'Bad request']);
+
+    }
+
+    /**
+     * @Route("/DownloadCsvCommande/", name="downloadcsv")
+     */
+    public function DownloadCsvCommande()
+    {
+
+        $spreadsheet = new Spreadsheet();
+
+        /* @var $sheet \PhpOffice\PhpSpreadsheet\Writer\Xlsx\Worksheet */
+        $sheet = $spreadsheet->getActiveSheet();
+        $sheet->setCellValue('A1', 'Commande');
+        $sheet->setCellValue('B1', 'Client');
+        $sheet->setCellValue('C1', 'Date Commande');
+        $sheet->setCellValue('D1', 'Total en DT');
+        $sheet->setCellValue('E1', 'Etat');
+
+        $em = $this->getDoctrine()->getManager();
+        $commandes= $em->getRepository(Commande::class)->findAll();
+
+
+        $numberLine=1;
+        foreach($commandes as $e)
+        {
+            $line="A";
+
+            $numberLine++;
+            $idcmd = $e->getId();
+            $client = $e->getUser()->getNom().' '.$e->getUser()->getPrenom();
+            $datecmd = date_format( $e->getOrderDate(),"d/m/Y");
+            $totalachat = $e->getTotalAchat();
+            $status = $e->getStatus();
+
+            $sheet->setCellValue($line.$numberLine, $idcmd);
+            $line++;
+            $sheet->setCellValue($line.$numberLine, $client);
+            $line++;
+            $sheet->setCellValue($line.$numberLine, $datecmd);
+            $line++;
+            $sheet->setCellValue($line.$numberLine, $totalachat);
+            $line++;
+            $sheet->setCellValue($line.$numberLine, $status);
+        }
+
+
+        $sheet->setTitle("My First Worksheet");
+
+        // Create your Office 2007 Excel (XLSX Format)
+        $writer = new Xlsx($spreadsheet);
+
+        // Create a Temporary file in the system
+        $fileName = 'my_first_excel_symfony4.xlsx';
+        $temp_file = tempnam(sys_get_temp_dir(), $fileName);
+
+        // Create the excel file in the tmp directory of the system
+        $writer->save($temp_file);
+
+        // Return the excel file as an attachment
+        return $this->file($temp_file, $fileName, ResponseHeaderBag::DISPOSITION_INLINE);
 
     }
 }

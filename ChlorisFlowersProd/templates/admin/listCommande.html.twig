@@ -10,7 +10,13 @@
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
-            <div class="card-header py-3">
+            <div class="card-header py-3 " style="display: flex;flex-wrap: wrap;">
+                <div class="col-sm-12 col-md-6">
+                    <h2 class="m-0 font-weight-bold">Liste Commande</h2>
+                </div>
+                <div class="col-sm-12 col-md-6 pull-right" style="text-align: right;">
+                    <a class="btn btn-success" href="{{ path('downloadcsv') }}" >Exporter</a>
+                </div>
                 <h2 class="m-0 font-weight-bold">Liste Commande</h2>
             </div>
             <br>

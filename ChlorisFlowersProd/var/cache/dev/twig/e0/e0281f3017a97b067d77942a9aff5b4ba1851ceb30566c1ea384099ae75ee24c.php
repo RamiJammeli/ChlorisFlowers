@@ -271,7 +271,7 @@ class __TwigTemplate_89e9e4023ee0a07f25ad081898e97f45cd8ee338fc8a1449e27cd87594a
 
                                     <div class=\"bloom-calender product-receive-date \">
                                         <div class=\"input-group date\">
-                                            <input type=\"text\" class=\"form-control\" placeholder=\"Select delivery date\" name=\"date\" required>
+                                            <input type=\"text\" class=\"form-control\" placeholder=\"Date de livraison\" name=\"date\" required>
                                             <span class=\"input-group-addon\">
                                                 <i class=\"fa fa-calendar\"></i>
                                             </span>
@@ -282,14 +282,14 @@ class __TwigTemplate_89e9e4023ee0a07f25ad081898e97f45cd8ee338fc8a1449e27cd87594a
         if (((0 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 130, $this->source); })()), "stock", [], "any", false, false, false, 130), 0)) || (-1 === twig_compare(twig_get_attribute($this->env, $this->source, (isset($context["product"]) || array_key_exists("product", $context) ? $context["product"] : (function () { throw new RuntimeError('Variable "product" does not exist.', 130, $this->source); })()), "stock", [], "any", false, false, false, 130), 0)))) {
             // line 131
             echo "                                        <div class=\"btn-wrapper\">
-                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Add to cart\" disabled=\"disabled\">
+                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Ajouter au panier\" disabled=\"disabled\">
                                     </div>
                                      ";
         } else {
             // line 135
             echo "
                                     <div class=\"btn-wrapper\">
-                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Add to cart\">
+                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Ajouter au panier\">
                                     </div>
                                      ";
         }
@@ -452,7 +452,7 @@ class __TwigTemplate_89e9e4023ee0a07f25ad081898e97f45cd8ee338fc8a1449e27cd87594a
 
                                     <div class=\"bloom-calender product-receive-date \">
                                         <div class=\"input-group date\">
-                                            <input type=\"text\" class=\"form-control\" placeholder=\"Select delivery date\" name=\"date\" required>
+                                            <input type=\"text\" class=\"form-control\" placeholder=\"Date de livraison\" name=\"date\" required>
                                             <span class=\"input-group-addon\">
                                                 <i class=\"fa fa-calendar\"></i>
                                             </span>
@@ -460,12 +460,12 @@ class __TwigTemplate_89e9e4023ee0a07f25ad081898e97f45cd8ee338fc8a1449e27cd87594a
                                     </div>
                                    {% if (product.stock == 0) or (product.stock <0) %}
                                         <div class=\"btn-wrapper\">
-                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Add to cart\" disabled=\"disabled\">
+                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Ajouter au panier\" disabled=\"disabled\">
                                     </div>
                                      {%else%}
 
                                     <div class=\"btn-wrapper\">
-                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Add to cart\">
+                                        <input type=\"submit\" class=\"boxed-btn btn-rounded\" id=\"cart\" value=\"Ajouter au panier\">
                                     </div>
                                      {% endif %}
                                 </div>
@@ -477,6 +477,6 @@ class __TwigTemplate_89e9e4023ee0a07f25ad081898e97f45cd8ee338fc8a1449e27cd87594a
         </div>
     </div>
 
-{% endblock %}", "product/details.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\details.html.twig");
+{% endblock %}", "product/details.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\product\\details.html.twig");
     }
 }

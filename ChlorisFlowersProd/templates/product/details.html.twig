@@ -121,7 +121,7 @@
 
                                     <div class="bloom-calender product-receive-date ">
                                         <div class="input-group date">
-                                            <input type="text" class="form-control" placeholder="Select delivery date" name="date" required>
+                                            <input type="text" class="form-control" placeholder="Date de livraison" name="date" required>
                                             <span class="input-group-addon">
                                                 <i class="fa fa-calendar"></i>
                                             </span>
@@ -129,12 +129,12 @@
                                     </div>
                                    {% if (product.stock == 0) or (product.stock <0) %}
                                         <div class="btn-wrapper">
-                                        <input type="submit" class="boxed-btn btn-rounded" id="cart" value="Add to cart" disabled="disabled">
+                                        <input type="submit" class="boxed-btn btn-rounded" id="cart" value="Ajouter au panier" disabled="disabled">
                                     </div>
                                      {%else%}
 
                                     <div class="btn-wrapper">
-                                        <input type="submit" class="boxed-btn btn-rounded" id="cart" value="Add to cart">
+                                        <input type="submit" class="boxed-btn btn-rounded" id="cart" value="Ajouter au panier">
                                     </div>
                                      {% endif %}
                                 </div>

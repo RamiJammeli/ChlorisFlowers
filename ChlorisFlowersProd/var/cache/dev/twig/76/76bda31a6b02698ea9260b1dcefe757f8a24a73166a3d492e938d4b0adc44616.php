@@ -69,26 +69,26 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
     ";
         // line 16
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 43
+        // line 52
         echo "
 </head>
 <body>
 ";
-        // line 46
+        // line 55
         $this->displayBlock('navBar', $context, $blocks);
-        // line 316
+        // line 325
         echo "
             ";
-        // line 317
+        // line 326
         $this->displayBlock('body', $context, $blocks);
-        // line 318
+        // line 327
         echo "        </div>
     </div>
 </div>
 ";
-        // line 321
+        // line 330
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 479
+        // line 488
         echo "</body>
 </html>";
         
@@ -162,6 +162,15 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
                 color: #fff !important;
                 background-color: #c1bdbd !important;
             }
+            @media screen and (max-width:767px){
+                .pagination{
+                    display: block;
+
+                }
+            }
+
+
+
         </style>
     ";
         
@@ -172,7 +181,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
 
     }
 
-    // line 46
+    // line 55
     public function block_navBar($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -182,7 +191,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "navBar"));
 
-        // line 47
+        // line 56
         echo "
 <div id=\"wrapper\">
 
@@ -193,11 +202,11 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
 
 
         <div class=\"sidebar-brand-text mx-3\">  <a href=\"";
-        // line 56
+        // line 65
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listProduitAdmin");
         echo "\" class=\"logo\">
                 <img src=\"";
-        // line 57
+        // line 66
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/logo1.png"), "html", null, true);
         echo "\" alt=\"logo\" width=\"180px\" height=\"82px\" >
             </a></div>
@@ -220,11 +229,11 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
             <div id=\"collapseTwo\" class=\"collapse\" aria-labelledby=\"headingTwo\" data-parent=\"#accordionSidebar\">
                 <div class=\"bg-white py-2 collapse-inner rounded\">
                     <a class=\"collapse-item\" href=\"";
-        // line 77
+        // line 86
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listProduitAdmin");
         echo "\">Liste des produits</a>
                     <a class=\"collapse-item\" href=\"";
-        // line 78
+        // line 87
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("AddProductAdmin");
         echo "\">Ajout produit</a>
                 </div>
@@ -241,7 +250,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
             <div id=\"collapseUtilities\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">
                 <div class=\"bg-white py-2 collapse-inner rounded\">
                     <a class=\"collapse-item\" href=\"";
-        // line 92
+        // line 101
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("listCommande");
         echo "\">Liste des Commandes</a>
                 </div>
@@ -256,7 +265,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
             <div id=\"collapseUtilities\" class=\"collapse\" aria-labelledby=\"headingUtilities\" data-parent=\"#accordionSidebar\">
                 <div class=\"bg-white py-2 collapse-inner rounded\">
                     <a class=\"collapse-item\" href=\"";
-        // line 104
+        // line 113
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">Accueil</a>
                 </div>
@@ -295,7 +304,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
                 </button>
 
                 ";
-        // line 151
+        // line 160
         echo "
                 <!-- Topbar Navbar -->
                 <ul class=\"navbar-nav ml-auto\">
@@ -432,7 +441,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
                         <a class=\"nav-link dropdown-toggle\" href=\"#\" id=\"userDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
                             <span class=\"mr-2 d-none d-lg-inline text-gray-600 small\">Chloris Flowers</span>
                             <img class=\"img-profile rounded-circle\" src=\"";
-        // line 286
+        // line 295
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("client/img/LOGO.png"), "html", null, true);
         echo "\" >
                         </a>
@@ -472,7 +481,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
 
     }
 
-    // line 317
+    // line 326
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -490,7 +499,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
 
     }
 
-    // line 321
+    // line 330
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -500,42 +509,42 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 322
+        // line 331
         echo "
 
     <script src=\"";
-        // line 324
+        // line 333
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendor/jquery/jquery.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 325
+        // line 334
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendor/bootstrap/js/bootstrap.bundle.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 326
+        // line 335
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendor/jquery-easing/jquery.easing.min.js"), "html", null, true);
         echo "\"></script>
 
 
     <!-- Page level plugins -->
     <script src=\"";
-        // line 330
+        // line 339
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendor/datatables/jquery.dataTables.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 331
+        // line 340
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/vendor/datatables/dataTables.bootstrap4.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 332
+        // line 341
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/demo/datatables-demo.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 333
+        // line 342
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/sb-admin-2.min.js"), "html", null, true);
         echo "\"></script>
     <script src=\"";
-        // line 334
+        // line 343
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/demo/datatables-demo.js"), "html", null, true);
         echo "\"></script>
     <script>
@@ -557,7 +566,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
     </script>
 
     <script src=\"";
-        // line 353
+        // line 362
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("admin/js/axios.min.js"), "html", null, true);
         echo "\"></script>
 
@@ -705,7 +714,7 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
 
     public function getDebugInfo()
     {
-        return array (  561 => 353,  539 => 334,  535 => 333,  531 => 332,  527 => 331,  523 => 330,  516 => 326,  512 => 325,  508 => 324,  504 => 322,  494 => 321,  476 => 317,  436 => 286,  299 => 151,  260 => 104,  245 => 92,  228 => 78,  224 => 77,  201 => 57,  197 => 56,  186 => 47,  176 => 46,  149 => 26,  143 => 23,  136 => 19,  132 => 17,  122 => 16,  103 => 14,  92 => 479,  90 => 321,  85 => 318,  83 => 317,  80 => 316,  78 => 46,  73 => 43,  71 => 16,  66 => 14,  60 => 11,  48 => 1,);
+        return array (  570 => 362,  548 => 343,  544 => 342,  540 => 341,  536 => 340,  532 => 339,  525 => 335,  521 => 334,  517 => 333,  513 => 331,  503 => 330,  485 => 326,  445 => 295,  308 => 160,  269 => 113,  254 => 101,  237 => 87,  233 => 86,  210 => 66,  206 => 65,  195 => 56,  185 => 55,  149 => 26,  143 => 23,  136 => 19,  132 => 17,  122 => 16,  103 => 14,  92 => 488,  90 => 330,  85 => 327,  83 => 326,  80 => 325,  78 => 55,  73 => 52,  71 => 16,  66 => 14,  60 => 11,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -750,6 +759,15 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
                 color: #fff !important;
                 background-color: #c1bdbd !important;
             }
+            @media screen and (max-width:767px){
+                .pagination{
+                    display: block;
+
+                }
+            }
+
+
+
         </style>
     {% endblock %}
 
@@ -1189,6 +1207,6 @@ class __TwigTemplate_03072f1897b0308a119e8c994b3791d239853de34edf8a3fbb489425f79
 
 {% endblock %}
 </body>
-</html>", "baseAdmin.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\baseAdmin.html.twig");
+</html>", "baseAdmin.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\baseAdmin.html.twig");
     }
 }

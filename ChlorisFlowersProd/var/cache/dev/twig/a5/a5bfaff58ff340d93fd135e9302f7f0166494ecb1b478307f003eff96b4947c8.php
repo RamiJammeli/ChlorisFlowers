@@ -73,7 +73,16 @@ class __TwigTemplate_bb9c04932826e3d0913d3cea9224ea6d0ecbde07dcbdc7a0354d301e15c
 
         <!-- DataTales Example -->
         <div class=\"card shadow mb-4\">
-            <div class=\"card-header py-3\">
+            <div class=\"card-header py-3 \" style=\"display: flex;flex-wrap: wrap;\">
+                <div class=\"col-sm-12 col-md-6\">
+                    <h2 class=\"m-0 font-weight-bold\">Liste Commande</h2>
+                </div>
+                <div class=\"col-sm-12 col-md-6 pull-right\" style=\"text-align: right;\">
+                    <a class=\"btn btn-success\" href=\"";
+        // line 18
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("downloadcsv");
+        echo "\" >Exporter</a>
+                </div>
                 <h2 class=\"m-0 font-weight-bold\">Liste Commande</h2>
             </div>
             <br>
@@ -87,8 +96,8 @@ class __TwigTemplate_bb9c04932826e3d0913d3cea9224ea6d0ecbde07dcbdc7a0354d301e15c
                                 <div class=\"col mr-2\">
                                     <div class=\"text-xs font-weight-bold text-danger text-uppercase mb-1\">Non traité</div>
                                     <div class=\"h5 mb-0 font-weight-bold text-gray-800\">";
-        // line 26
-        echo twig_escape_filter($this->env, (isset($context["nontraite"]) || array_key_exists("nontraite", $context) ? $context["nontraite"] : (function () { throw new RuntimeError('Variable "nontraite" does not exist.', 26, $this->source); })()), "html", null, true);
+        // line 32
+        echo twig_escape_filter($this->env, (isset($context["nontraite"]) || array_key_exists("nontraite", $context) ? $context["nontraite"] : (function () { throw new RuntimeError('Variable "nontraite" does not exist.', 32, $this->source); })()), "html", null, true);
         echo "</div>
                                 </div>
                                 <div class=\"col-auto\">
@@ -107,8 +116,8 @@ class __TwigTemplate_bb9c04932826e3d0913d3cea9224ea6d0ecbde07dcbdc7a0354d301e15c
                                 <div class=\"col mr-2\">
                                     <div class=\"text-xs font-weight-bold text-warning text-uppercase mb-1\">En cours</div>
                                     <div class=\"h5 mb-0 font-weight-bold text-gray-800\">";
-        // line 43
-        echo twig_escape_filter($this->env, (isset($context["encours"]) || array_key_exists("encours", $context) ? $context["encours"] : (function () { throw new RuntimeError('Variable "encours" does not exist.', 43, $this->source); })()), "html", null, true);
+        // line 49
+        echo twig_escape_filter($this->env, (isset($context["encours"]) || array_key_exists("encours", $context) ? $context["encours"] : (function () { throw new RuntimeError('Variable "encours" does not exist.', 49, $this->source); })()), "html", null, true);
         echo "</div>
                                 </div>
                                 <div class=\"col-auto\">
@@ -129,8 +138,8 @@ class __TwigTemplate_bb9c04932826e3d0913d3cea9224ea6d0ecbde07dcbdc7a0354d301e15c
                                     <div class=\"row no-gutters align-items-center\">
                                         <div class=\"col-auto\">
                                             <div class=\"h5 mb-0 mr-3 font-weight-bold text-gray-800\">";
-        // line 62
-        echo twig_escape_filter($this->env, (isset($context["livre"]) || array_key_exists("livre", $context) ? $context["livre"] : (function () { throw new RuntimeError('Variable "livre" does not exist.', 62, $this->source); })()), "html", null, true);
+        // line 68
+        echo twig_escape_filter($this->env, (isset($context["livre"]) || array_key_exists("livre", $context) ? $context["livre"] : (function () { throw new RuntimeError('Variable "livre" does not exist.', 68, $this->source); })()), "html", null, true);
         echo "</div>
                                         </div>
 
@@ -161,75 +170,75 @@ class __TwigTemplate_bb9c04932826e3d0913d3cea9224ea6d0ecbde07dcbdc7a0354d301e15c
                         </thead>
                         <tbody>
                         ";
-        // line 91
+        // line 97
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 91, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["items"]) || array_key_exists("items", $context) ? $context["items"] : (function () { throw new RuntimeError('Variable "items" does not exist.', 97, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["item"]) {
-            // line 92
+            // line 98
             echo "                            <tr>
                                 <td><a  style=\"color: #42444e\">";
-            // line 93
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 93), "html", null, true);
+            // line 99
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 99), "html", null, true);
             echo "</a></td>
                                 <td>  ";
-            // line 94
-            if ( !(null === twig_get_attribute($this->env, $this->source, $context["item"], "user", [], "any", false, false, false, 94))) {
-                // line 95
+            // line 100
+            if ( !(null === twig_get_attribute($this->env, $this->source, $context["item"], "user", [], "any", false, false, false, 100))) {
+                // line 101
                 echo "                                        ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "user", [], "any", false, false, false, 95), "nom", [], "any", false, false, false, 95), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "user", [], "any", false, false, false, 101), "nom", [], "any", false, false, false, 101), "html", null, true);
                 echo " ";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "user", [], "any", false, false, false, 95), "prenom", [], "any", false, false, false, 95), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, $context["item"], "user", [], "any", false, false, false, 101), "prenom", [], "any", false, false, false, 101), "html", null, true);
                 echo "
                                     ";
             } else {
-                // line 97
+                // line 103
                 echo "                                        N/A
                                     ";
             }
-            // line 98
+            // line 104
             echo "</td>
                                 <td>";
-            // line 99
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "orderDate", [], "any", false, false, false, 99), "d/m/Y"), "html", null, true);
+            // line 105
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "orderDate", [], "any", false, false, false, 105), "d/m/Y"), "html", null, true);
             echo "</td>
                                 <td>";
-            // line 100
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "totalAchat", [], "any", false, false, false, 100), "html", null, true);
+            // line 106
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "totalAchat", [], "any", false, false, false, 106), "html", null, true);
             echo "</td>
 
                                 <td class=\"js-status\">
                                     ";
-            // line 103
-            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 103), "Non traité"))) {
-                // line 104
-                echo "                                        <a  href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change_status", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 104)]), "html", null, true);
-                echo "\"  class=\"js-status btn btn-danger btn-icon-split\">  <span style=\"color: white\" class=\"js-status text\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 104), "html", null, true);
-                echo "</span>
-                                        </a>
-                                    ";
-            } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source,             // line 106
-$context["item"], "status", [], "any", false, false, false, 106), "En cours"))) {
-                // line 107
-                echo "                                        <a  href=\"";
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change_status", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 107)]), "html", null, true);
-                echo "\" class=\"js-status btn btn-warning btn-icon-split\">  <span style=\"color: white\" class=\"js-status text\">";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 107), "html", null, true);
-                echo "</span>
-                                        </a>
-                                    ";
-            } else {
+            // line 109
+            if ((0 === twig_compare(twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 109), "Non traité"))) {
                 // line 110
                 echo "                                        <a  href=\"";
                 echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change_status", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 110)]), "html", null, true);
-                echo "\" class=\"js-status btn btn-success btn-icon-split\">  <span style=\"color: white\" class=\"js-status text\">";
+                echo "\"  class=\"js-status btn btn-danger btn-icon-split\">  <span style=\"color: white\" class=\"js-status text\">";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 110), "html", null, true);
                 echo "</span>
                                         </a>
                                     ";
+            } elseif ((0 === twig_compare(twig_get_attribute($this->env, $this->source,             // line 112
+$context["item"], "status", [], "any", false, false, false, 112), "En cours"))) {
+                // line 113
+                echo "                                        <a  href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change_status", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 113)]), "html", null, true);
+                echo "\" class=\"js-status btn btn-warning btn-icon-split\">  <span style=\"color: white\" class=\"js-status text\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 113), "html", null, true);
+                echo "</span>
+                                        </a>
+                                    ";
+            } else {
+                // line 116
+                echo "                                        <a  href=\"";
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("change_status", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 116)]), "html", null, true);
+                echo "\" class=\"js-status btn btn-success btn-icon-split\">  <span style=\"color: white\" class=\"js-status text\">";
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["item"], "status", [], "any", false, false, false, 116), "html", null, true);
+                echo "</span>
+                                        </a>
+                                    ";
             }
-            // line 113
+            // line 119
             echo "
 
                                 </td>
@@ -237,8 +246,8 @@ $context["item"], "status", [], "any", false, false, false, 106), "En cours"))) 
                                 <td class=\"pr-2\">
 
                                     <a  href=\"";
-            // line 119
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detailsCommandeAdmin", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 119)]), "html", null, true);
+            // line 125
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("detailsCommandeAdmin", ["idCmd" => twig_get_attribute($this->env, $this->source, $context["item"], "id", [], "any", false, false, false, 125)]), "html", null, true);
             echo "\"><i class=\"fa fa-eye pr-2\" style=\"font-size:20px;color:#efa2a9\"></i></a>
 
                                 </td>
@@ -249,7 +258,7 @@ $context["item"], "status", [], "any", false, false, false, 106), "En cours"))) 
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['item'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 125
+        // line 131
         echo "                        </tbody>
                     </table>
                 </div>
@@ -285,7 +294,7 @@ $context["item"], "status", [], "any", false, false, false, 106), "En cours"))) 
 
     public function getDebugInfo()
     {
-        return array (  253 => 125,  241 => 119,  233 => 113,  224 => 110,  215 => 107,  213 => 106,  205 => 104,  203 => 103,  197 => 100,  193 => 99,  190 => 98,  186 => 97,  178 => 95,  176 => 94,  172 => 93,  169 => 92,  165 => 91,  133 => 62,  111 => 43,  91 => 26,  68 => 5,  58 => 4,  35 => 1,);
+        return array (  262 => 131,  250 => 125,  242 => 119,  233 => 116,  224 => 113,  222 => 112,  214 => 110,  212 => 109,  206 => 106,  202 => 105,  199 => 104,  195 => 103,  187 => 101,  185 => 100,  181 => 99,  178 => 98,  174 => 97,  142 => 68,  120 => 49,  100 => 32,  83 => 18,  68 => 5,  58 => 4,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -302,7 +311,13 @@ $context["item"], "status", [], "any", false, false, false, 106), "En cours"))) 
 
         <!-- DataTales Example -->
         <div class=\"card shadow mb-4\">
-            <div class=\"card-header py-3\">
+            <div class=\"card-header py-3 \" style=\"display: flex;flex-wrap: wrap;\">
+                <div class=\"col-sm-12 col-md-6\">
+                    <h2 class=\"m-0 font-weight-bold\">Liste Commande</h2>
+                </div>
+                <div class=\"col-sm-12 col-md-6 pull-right\" style=\"text-align: right;\">
+                    <a class=\"btn btn-success\" href=\"{{ path('downloadcsv') }}\" >Exporter</a>
+                </div>
                 <h2 class=\"m-0 font-weight-bold\">Liste Commande</h2>
             </div>
             <br>
@@ -428,6 +443,6 @@ $context["item"], "status", [], "any", false, false, false, 106), "En cours"))) 
 
 
 
-{% endblock %}", "admin/listCommande.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\admin\\listCommande.html.twig");
+{% endblock %}", "admin/listCommande.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\admin\\listCommande.html.twig");
     }
 }

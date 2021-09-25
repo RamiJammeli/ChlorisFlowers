@@ -456,6 +456,6 @@ class __TwigTemplate_263939043c241116613dfce7fb847942d6b74935d21ac494278249dd295
 <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
-</html>", "registration/emailBody.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\registration\\emailBody.html.twig");
+</html>", "registration/emailBody.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\registration\\emailBody.html.twig");
     }
 }

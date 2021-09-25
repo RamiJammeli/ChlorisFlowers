@@ -73,7 +73,7 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
                 <div class=\"col-xl-8 offset-xl-2\">
                     <div class=\"shoping-cart-tab-menu\">
                         <div class=\"nav\">
-                            <a class=\"active show\" data-toggle=\"tab\">Cart</a>
+                            <a class=\"active show\" data-toggle=\"tab\">Panier</a>
                         </div>
                     </div>
                 </div>
@@ -181,7 +181,7 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
                                                         <div class=\"row\">
                                                             <div class=\"col-xl-6\">
                                                                 <div class=\"shopping-cart-coupon\">
-                                                                    <p>Enter a promo code</p>
+                                                                    <p>Entrer un code promo</p>
                                                                     <form action=\"#\" class=\"form-input-box\">
                                                                         <input type=\"text\" placeholder=\"HELLOSUMMER\">
                                                                         <button type=\"submit\"><i class=\"ti-check\"></i>
@@ -302,7 +302,7 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
                                                                                 <tr>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td>Shipping and handling:</td>
+                                                                                    <td>Frais d'expédition:</td>
                                                                                     <td>10 DT</td>
                                                                                 </tr>
                                                                                 <tr class=\"shipping-subtotal-price\">
@@ -388,7 +388,7 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
                 <div class=\"col-xl-8 offset-xl-2\">
                     <div class=\"shoping-cart-tab-menu\">
                         <div class=\"nav\">
-                            <a class=\"active show\" data-toggle=\"tab\">Cart</a>
+                            <a class=\"active show\" data-toggle=\"tab\">Panier</a>
                         </div>
                     </div>
                 </div>
@@ -461,7 +461,7 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
                                                         <div class=\"row\">
                                                             <div class=\"col-xl-6\">
                                                                 <div class=\"shopping-cart-coupon\">
-                                                                    <p>Enter a promo code</p>
+                                                                    <p>Entrer un code promo</p>
                                                                     <form action=\"#\" class=\"form-input-box\">
                                                                         <input type=\"text\" placeholder=\"HELLOSUMMER\">
                                                                         <button type=\"submit\"><i class=\"ti-check\"></i>
@@ -576,7 +576,7 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
                                                                                 <tr>
                                                                                 </tr>
                                                                                 <tr>
-                                                                                    <td>Shipping and handling:</td>
+                                                                                    <td>Frais d'expédition:</td>
                                                                                     <td>10 DT</td>
                                                                                 </tr>
                                                                                 <tr class=\"shipping-subtotal-price\">
@@ -623,6 +623,6 @@ class __TwigTemplate_2d83c4fa86e1487a3d0052d0667bab9ae3db88d60bc1b4ab6933d974ee5
     </div>
 
 
-{% endblock %}", "order/panier.html.twig", "C:\\Users\\ramij\\OneDrive\\Documents\\Smartleap2\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\order\\panier.html.twig");
+{% endblock %}", "order/panier.html.twig", "C:\\Users\\elee\\Documents\\smartleap\\ChlorisFlowers\\ChlorisFlowersProd\\templates\\order\\panier.html.twig");
     }
 }

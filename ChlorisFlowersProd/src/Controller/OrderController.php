@@ -71,7 +71,38 @@ class OrderController extends AbstractController
             $session->set('total', $this->getTotal());
          $this->addFlash('success', 'Votre produit a été ajouté avec succés');
 
-        return $this->redirectToRoute('product_details',['id'=>$id]);
+        // return $this->redirectToRoute('product_details',['id'=>$id]);
+
+        $panierwithdata = [];
+        $totalSum = 0;
+        foreach ($panier as $id=>$quantity){
+
+            $prodQuantity = abs((int)$quantity);
+
+            $panierwithdata []=[
+                'produits' =>$this->getDoctrine()->getRepository(Product::class)->find($id),
+                $price = $this->getDoctrine()->getRepository(Product::class)->find($id)->getPrix(),
+                $sum = $price * $panier[$id]['qty'],
+                'quantity'=>$panier[$id]['qty'],
+                'price'=>$price,
+                'sum'=>$sum,
+                $totalSum += $sum,
+                'carte'=>$panier[$id]['carte'],
+                'date'=>$panier[$id]['date'],
+                'commentaire'=>$panier[$id]['commentaire']
+
+
+
+            ];
+        }
+
+
+        return $this->render('order/panier.html.twig', [
+            'items'=>$panierwithdata,
+            'totalsum' => $totalSum,
+
+        ]);
+
 
 
     }

@@ -13,7 +13,7 @@ use App\Controller\ProductController;
 use Gedmo\Sluggable\Util\Urlizer;
 
 /**
- * @Route("/admin")
+ * @Route("/adminw")
  *
  */
 class ProductAdminController extends AbstractController
